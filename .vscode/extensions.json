@@ -6,6 +6,7 @@
         "eamodio.gitlens",
         "esbenp.prettier-vscode",
         "2gua.rainbow-brackets",
-        "gruntfuggly.todo-tree"
+        "gruntfuggly.todo-tree",
+        "dbaeumer.vscode-eslint"
     ]
 }

@@ -11,5 +11,11 @@
         "titleBar.activeBackground": "#9b1924",
 	},
     "typescript.tsdk": "node_modules/typescript/lib",
-    "gitlens.advanced.blame.customArguments": ["--ignore-revs-file", ".git-blame-ignore-revs"]
+    "gitlens.advanced.blame.customArguments": [
+        "--ignore-revs-file",
+        ".git-blame-ignore-revs"
+    ],
+    "files.exclude": {
+        "**/.fttemplates": true
+    }
 }
