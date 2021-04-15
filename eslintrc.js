@@ -4,8 +4,7 @@ module.exports = {
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    'prettier',
-    "plugin:css-modules/recommended",
+    "prettier"
   ],
   plugins: ["react", "@typescript-eslint", "css-modules"],
   env: {

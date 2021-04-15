@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./[FTName].module.css";
+import styles from "./[FTName].module.scss";
 // Components
 // Context
 // Hooks
@@ -9,11 +9,11 @@ import styles from "./[FTName].module.css";
 interface Props {
 };
 
-export default function [FTName]({}: Props) {
+export const [FTName]: React.FC<Props> = ({}) => {
 
     return (
         <div>
-
+            [FTName] Component
         </div>
     );
 };

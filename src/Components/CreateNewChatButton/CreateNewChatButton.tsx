@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./CreateNewChatButton.module.css";
 import clsx from "clsx";
 // Components
 // Media

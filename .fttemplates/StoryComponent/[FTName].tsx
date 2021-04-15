@@ -1,19 +1,19 @@
 import React from "react";
-import styles from "./[FTName].module.css";
+import styles from "./[FTName].module.scss";
 // Components
 // Context
 // Hooks
 // Pages
 // Resources
 
-export interface Props {
+interface Props {
 };
 
-export default function [FTName]({}: Props) {
+export const [FTName]: React.FC<Props> = ({}) => {
 
     return (
         <div>
-
+            [FTName] Component
         </div>
     );
 };

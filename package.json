@@ -12,6 +12,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "clsx": "^1.1.1",
+    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -25,10 +26,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "prettier:check": "prettier --check src/**/*",
     "prettier:fix": "prettier --write src/**/*",
-    "stylelint": "stylelint src/**/*.module.css",
-    "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn stylelint",
+    "prettier:check": "prettier --check src/**/*",
+    "stylelint": "stylelint src/**/*.module.scss",
+    "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn prettier:check && yarn stylelint",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
@@ -61,7 +62,6 @@
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
@@ -78,6 +78,7 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-selector-bem-pattern": "^2.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript-plugin-css-modules": "^3.2.0"
   }
 }
