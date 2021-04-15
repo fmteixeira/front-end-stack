@@ -9,7 +9,7 @@ import styles from "./[FTName].module.scss";
 interface Props {
 };
 
-export const [FTName]: React.FC<Props> = ({}) => {
+const [FTName]: React.FC<Props> = ({}) => {
 
     return (
         <div>
@@ -18,3 +18,4 @@ export const [FTName]: React.FC<Props> = ({}) => {
     );
 };
 
+export default [FTName];

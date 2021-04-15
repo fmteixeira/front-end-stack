@@ -6,14 +6,12 @@ import styles from "./App.module.scss";
 // Pages
 // Resources
 
-interface Props {
-  name: string;
-}
-
-export const App: React.FC<Props> = () => {
+const App: React.FC = () => {
   return (
     <div className={styles["block-name__element-name--modifier-name"]}>
       Hello World!
     </div>
   );
 };
+
+export default App;
