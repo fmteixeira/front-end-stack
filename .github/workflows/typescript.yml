@@ -1,4 +1,4 @@
-name: lint 🔎
+name: Typescriptt
 on: [push]
 
 jobs:
@@ -13,6 +13,9 @@ jobs:
         
         - name: Install dependencies
           run: yarn
+  
+        - name: Check Typescript
+          run: yarn tsc
           
         - name: Lint
           run: yarn format-check
