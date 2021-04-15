@@ -1,7 +1,7 @@
 /* stylelint-disable at-rule-no-unknown */
 /* stylelint-disable color-no-hex */
 /* stylelint-disable plugin/selector-bem-pattern */
-/* stylelint-disable declaration-property-value-blacklist */
+/* stylelint-disable declaration-property-value-disallowed-list */
 
 @tailwind base;
 @tailwind components;

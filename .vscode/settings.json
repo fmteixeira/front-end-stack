@@ -1,9 +1,14 @@
 {
-    "editor.formatOnSave": true,
-    "eslint.validate": ["typescript", "typescriptreact"],
-    "editor.codeActionsOnSave": {
+    "files.eol": "\n",
+    "css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true,
         "source.fixAll.eslint": true
-    },
+	},
+    "eslint.validate": ["typescript", "typescriptreact"],
     "files.watcherExclude": {
         "**/target": true
     },
