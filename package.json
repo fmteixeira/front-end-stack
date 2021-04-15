@@ -26,8 +26,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "prettier:fix": "prettier --write src/**/*",
-    "prettier:check": "prettier --check src/**/*",
+    "prettier:fix": "prettier --write src",
+    "prettier:check": "prettier --check src",
     "stylelint": "stylelint src/**/*.module.scss",
     "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn prettier:check && yarn stylelint",
     "tsc": "tsc --noEmit"
