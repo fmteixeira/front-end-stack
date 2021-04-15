@@ -27,6 +27,7 @@ export default function CreateNewChatButton({ text }: Props) {
       <div>
         <img src={plus} alt="" />
       </div>
+
       <div>{text}</div>
     </button>
   );

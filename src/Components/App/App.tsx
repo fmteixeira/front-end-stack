@@ -9,5 +9,5 @@ import styles from "./App.module.css";
 interface Props {}
 
 export default function App({}: Props) {
-  return <div>Hello World!</div>;
+  return <div className={styles["name2"]}>Hello World!</div>;
 }
