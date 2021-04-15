@@ -1,4 +1,4 @@
-name: lint 🔎
+name: Typescript
 on: [push]
 
 jobs:
@@ -8,12 +8,11 @@ jobs:
 
         steps:
         - uses: actions/checkout@v2
-
+        
+        - uses: c-hive/gha-yarn-cache@v1
+        
         - name: Install dependencies
           run: yarn
-          
-        - name: Lint
-          run: yarn format-check
-
-        - name: Build
-          run: yarn build
+  
+        - name: Check Typescript
+          run: yarn tsc
