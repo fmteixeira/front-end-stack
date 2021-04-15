@@ -28,7 +28,7 @@
     "prettier:check": "prettier --check src/**/*",
     "prettier:fix": "prettier --write src/**/*",
     "stylelint": "stylelint src/**/*.module.css",
-    "lint": "eslint src/**/*.ts{,x} && yarn stylelint",
+    "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn stylelint",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
