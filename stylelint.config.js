@@ -24,5 +24,9 @@ module.exports = {
       // We allow any custom property (CSS var) names
       ignoreCustomProperties: ".*",
     },
+    "color-no-hex": [true, { "message": "Please use the global variables in src/index.css instead of hex values"}],
+    "declaration-property-value-blacklist": [{
+        "color": ["/^rgba/"]
+    }, { "message": "Please use the global variables in src/index.css instead of rgba values"}]
   },
 };
