@@ -8,37 +8,37 @@
 @tailwind utilities;
 
 @layer utilities {
-  .grid-columns-fr-auto {
-    grid-template-columns: 1fr auto;
-  }
-  .grid-columns-auto-fr {
-    grid-template-columns: auto 1fr;
-  }
-  .grid-rows-fr-auto {
-    grid-template-rows: 1fr auto;
-  }
-  .grid-rows-auto-fr {
-    grid-template-rows: auto 1fr;
-  }
+    .grid-columns-fr-auto {
+        grid-template-columns: 1fr auto;
+    }
+    .grid-columns-auto-fr {
+        grid-template-columns: auto 1fr;
+    }
+    .grid-rows-fr-auto {
+        grid-template-rows: 1fr auto;
+    }
+    .grid-rows-auto-fr {
+        grid-template-rows: auto 1fr;
+    }
 }
 
 /* Global Variables */
 :root {
-  /* Colors */
-  --color-black: #000;
-  --color-dark: #0d1c2e;
-  --color-blue: #2a8bf2;
-  --color-pink: #ff36;
-  --color-gray: #707c97;
-  --color-white-100: #fff;
-  --color-white-200: #fafbff;
-  --color-white-300: #e6ecfe;
+    /* Colors */
+    --color-black: #000;
+    --color-dark: #0d1c2e;
+    --color-blue: #2a8bf2;
+    --color-pink: #ff36;
+    --color-gray: #707c97;
+    --color-white-100: #fff;
+    --color-white-200: #fafbff;
+    --color-white-300: #e6ecfe;
 
-  /* Gradients */
-  --blue-start: #7cb8f7;
-  --blue-end: #2a8bf2;
+    /* Gradients */
+    --blue-start: #7cb8f7;
+    --blue-end: #2a8bf2;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }

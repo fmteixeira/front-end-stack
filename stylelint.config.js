@@ -26,7 +26,7 @@ module.exports = {
     },
     "color-no-hex": [true, { "message": "Please use the global variables in src/index.css instead of hex values"}],
     "declaration-property-value-disallowed-list": [{
-        "color": ["/^rgba/"]
+        "color": ["/^rgb/"]
     }, { "message": "Please use the global variables in src/index.css instead of rgba values"}]
   },
 };

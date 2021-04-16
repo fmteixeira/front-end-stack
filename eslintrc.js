@@ -4,7 +4,7 @@ module.exports = {
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
   ],
   plugins: ["react", "@typescript-eslint", "css-modules"],
   env: {
@@ -16,12 +16,17 @@ module.exports = {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
   },
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: "module",
     project: "./tsconfig.json",
   },

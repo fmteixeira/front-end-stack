@@ -1,17 +1,8 @@
 import React from "react";
-import styles from "./App.module.scss";
-// Components
-// Context
-// Hooks
-// Pages
-// Resources
+import styles from "./App.module.css";
 
 const App: React.FC = () => {
-  return (
-    <div className={styles["block-name__element-name--modifier-name"]}>
-      Hello World!
-    </div>
-  );
+    return <div className={styles["test"]}>Hello World!</div>;
 };
 
 export default App;

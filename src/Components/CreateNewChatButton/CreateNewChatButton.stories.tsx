@@ -5,10 +5,10 @@ import { withDesign } from "storybook-addon-designs";
 import CreateNewChatButton, { Props } from "./CreateNewChatButton";
 
 export default {
-  title: "CreateNewChatButton",
-  component: CreateNewChatButton,
-  decorators: [withDesign],
-  argTypes: {},
+    title: "CreateNewChatButton",
+    component: CreateNewChatButton,
+    decorators: [withDesign],
+    argTypes: {},
 } as Meta;
 
 /**
@@ -21,15 +21,14 @@ const Template: Story<Props> = (args) => <CreateNewChatButton {...args} />;
  */
 
 const props: Props = {
-  text: "Create New Chat",
+    text: "Create New Chat",
 };
 
 export const Default = Template.bind({});
 Default.args = props;
 Default.parameters = {
-  design: {
-    type: "figma",
-    url:
-      "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=24%3A78",
-  },
+    design: {
+        type: "figma",
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=24%3A78",
+    },
 };
