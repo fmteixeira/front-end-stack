@@ -9,25 +9,25 @@ import plus from "../../assets/svg/plus.svg";
 // Resources
 
 export interface Props {
-  text: string;
+    text: string;
 }
 
 export default function CreateNewChatButton({ text }: Props) {
-  return (
-    <button
-      className={clsx(
-        "bg-gradient-to-r from-blue-start to-blue-end",
-        "rounded-md",
-        "px-6 py-5",
-        "text-xl text-white-100",
-        "grid grid-columns-auto-fr gap-2 place-items-center"
-      )}
-    >
-      <div>
-        <img src={plus} alt="" />
-      </div>
+    return (
+        <button
+            className={clsx(
+                "bg-gradient-to-r from-blue-start to-blue-end",
+                "rounded-md",
+                "px-6 py-5",
+                "text-xl text-white-100",
+                "grid grid-columns-auto-fr gap-2 place-items-center",
+            )}
+        >
+            <div>
+                <img src={plus} alt="" />
+            </div>
 
-      <div>{text}</div>
-    </button>
-  );
+            <div>{text}</div>
+        </button>
+    );
 }

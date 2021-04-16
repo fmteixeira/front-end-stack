@@ -28,9 +28,9 @@
     "build-storybook": "build-storybook -s public",
     "prettier:fix": "prettier --write src",
     "prettier:check": "prettier --check src",
-    "stylelint:fix": "stylelint src/**/*.module.scss --fix",
-    "stylelint:check": "stylelint src/**/*.module.scss",
-    "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn stylelint:check",
+    "stylelint:fix": "stylelint src/**/*module.css --fix",
+    "stylelint:check": "stylelint src/**/*module.css",
+    "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn prettier:check && yarn stylelint:check",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
