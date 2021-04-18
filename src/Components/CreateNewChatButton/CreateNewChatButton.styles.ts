@@ -7,7 +7,7 @@ const styles = {
             "rounded-md",
             "px-6 py-5",
             "text-xl text-white-100",
-            "grid grid-columns-auto-fr gap-2 place-items-center",
+            "grid grid-cols-[auto,1fr] gap-2 place-items-center",
         ),
     buttonImage: clsx("h-[25px] w-[25px]"),
 };
