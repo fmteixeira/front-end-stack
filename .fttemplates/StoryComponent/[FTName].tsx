@@ -6,7 +6,7 @@ import styles from "./[FTName].module.scss";
 // Pages
 // Resources
 
-interface Props {
+export interface Props {
 };
 
 const [FTName]: React.FC<Props> = ({}) => {
