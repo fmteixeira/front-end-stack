@@ -8,18 +8,7 @@
 @tailwind utilities;
 
 @layer utilities {
-    .grid-columns-fr-auto {
-        grid-template-columns: 1fr auto;
-    }
-    .grid-columns-auto-fr {
-        grid-template-columns: auto 1fr;
-    }
-    .grid-rows-fr-auto {
-        grid-template-rows: 1fr auto;
-    }
-    .grid-rows-auto-fr {
-        grid-template-rows: auto 1fr;
-    }
+    /* Custom global classes */
 }
 
 /* Global Variables */
