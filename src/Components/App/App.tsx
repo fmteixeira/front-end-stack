@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./App.styles.ts";
+import styles from "./App.styles";
 // Components
 // Context
 // Hooks
