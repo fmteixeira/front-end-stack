@@ -11,7 +11,6 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "classnames": "^2.3.1",
     "clsx": "^1.1.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
@@ -30,15 +29,12 @@
     "build-storybook": "build-storybook -s public",
     "prettier:fix": "prettier --write src",
     "prettier:check": "prettier --check src",
-    "stylelint:fix": "stylelint src/**/*module.css --fix",
-    "stylelint:check": "stylelint src/**/*module.css",
-    "lint": "eslint src/**/*.ts{,x} --max-warnings 0 && yarn prettier:check && yarn stylelint:check",
+    "lint": "eslint src/**/*.ts{,x} && yarn prettier:check",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -72,16 +68,9 @@
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "1.7.0",
     "postcss": "7",
-    "postcss-bem-linter": "^3.3.0",
     "prettier": "^2.2.1",
     "storybook-addon-designs": "^5.4.5",
     "storybook-dark-mode": "^1.0.7",
-    "stylelint": "^13.12.0",
-    "stylelint-config-css-modules": "^2.2.0",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-prettier": "^1.2.0",
-    "stylelint-selector-bem-pattern": "^2.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript-plugin-css-modules": "^3.2.0"
   },

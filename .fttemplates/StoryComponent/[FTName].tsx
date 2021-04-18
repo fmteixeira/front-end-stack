@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./[FTName].module.scss";
+import styles from "./[FTName].styles.ts";
 // Components
 // Context
 // Hooks
