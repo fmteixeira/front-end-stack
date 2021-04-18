@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import styles from "./CreateNewChatButton.styles";
 // Components
 // Media
 import plus from "../../assets/svg/plus.svg";
@@ -10,24 +10,18 @@ import plus from "../../assets/svg/plus.svg";
 
 export interface Props {
     text: string;
+    darkMode?: boolean;
 }
 
-export default function CreateNewChatButton({ text }: Props) {
+const CreateNewChatButton: React.FC<Props> = ({ text, darkMode = false }: Props) => {
     return (
-        <button
-            className={clsx(
-                "bg-gradient-to-r from-blue-start to-blue-end",
-                "rounded-md",
-                "px-6 py-5",
-                "text-xl text-white-100",
-                "grid grid-columns-auto-fr gap-2 place-items-center",
-            )}
-        >
+        <button className={styles.button({ darkMode })}>
             <div>
-                <img src={plus} alt="" />
+                <img src={plus} alt="" className={styles.buttonImage} />
             </div>
-
             <div>{text}</div>
         </button>
     );
-}
+};
+
+export default CreateNewChatButton;
