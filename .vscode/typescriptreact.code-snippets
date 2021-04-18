@@ -50,17 +50,10 @@
     ],
     "description": "Typescript React Function Component with Props"
   },
-  "React Classname Style Module": {
-  	"prefix": "cs",
+  "React TS Style Class": {
+  	"prefix": "class",
   	"body": [
-  		"className=\"$1\"",
-  	],
-  	"description": "React Module Style"
-  },
-  "React Classname CX Style Module": {
-  	"prefix": "cscx",
-  	"body": [
-  		"className={cx(\"$1\")}",
+  		"className={styles$1}",
   	],
   	"description": "React Module Style with cx"
   },
