@@ -84,5 +84,8 @@
     "stylelint-selector-bem-pattern": "^2.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript-plugin-css-modules": "^3.2.0"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   }
 }
