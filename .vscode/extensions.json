@@ -7,6 +7,7 @@
         "esbenp.prettier-vscode",
         "2gua.rainbow-brackets",
         "gruntfuggly.todo-tree",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss"
     ]
 }

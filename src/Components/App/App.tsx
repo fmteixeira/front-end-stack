@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./App.styles";
 // Components
 // Context
 // Hooks
@@ -7,7 +6,7 @@ import styles from "./App.styles";
 // Resources
 
 const App: React.FC = () => {
-    return <div className={styles.app}>App Component</div>;
+    return <div>App Component</div>;
 };
 
 export default App;
