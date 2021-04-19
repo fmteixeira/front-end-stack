@@ -30,7 +30,8 @@
     "prettier:fix": "prettier --write src",
     "prettier:check": "prettier --check src",
     "lint": "eslint src/**/*.ts{,x} && yarn prettier:check",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "chromatic": "npx chromatic ./storybook-static --project-token 67e20e34eb59"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +60,7 @@
     "@tailwindcss/postcss7-compat": "^2.1.0",
     "@types/classnames": "^2.2.11",
     "autoprefixer": "9",
+    "chromatic": "^5.6.2",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.2.0",
