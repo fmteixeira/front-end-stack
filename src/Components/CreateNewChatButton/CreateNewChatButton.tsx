@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import clsx from "clsx";
 // Components
 // Media
@@ -12,7 +12,7 @@ export interface Props {
     text: string;
 }
 
-const CreateNewChatButton: React.FC<Props> = ({ text }: Props) => {
+const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
     // FIXME: Remove this
     const darkMode: boolean = false;
 
