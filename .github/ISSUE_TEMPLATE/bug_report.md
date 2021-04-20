@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## *Onde* se localiza o bug ?
+## Onde se localiza o bug ?
 <!-- Ex. Na caixa de bate-papo do Supervisor, na página de perfil da conversa, na tela de dois fatores -->
 
 ## Como replicar o bug?
