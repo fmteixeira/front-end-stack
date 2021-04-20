@@ -13,7 +13,7 @@ export interface Props {
 }
 
 const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
-    // FIXME: Remove this
+    // FIXME: Remove this, keep gradient styles
     const darkMode: boolean = false;
 
     return (
