@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 // Components
 // Media
-import plus from "../../assets/svg/plus.svg";
+import plus from "../../Media/icons/plus.svg";
 // Context
 // Hooks
 // Pages
@@ -10,10 +10,12 @@ import plus from "../../assets/svg/plus.svg";
 
 export interface Props {
     text: string;
-    darkMode?: boolean;
 }
 
-const CreateNewChatButton: React.FC<Props> = ({ text, darkMode = false }: Props) => {
+const CreateNewChatButton: React.FC<Props> = ({ text }: Props) => {
+    // FIXME: Remove this
+    const darkMode: boolean = false;
+
     return (
         <button
             className={clsx(
@@ -25,7 +27,7 @@ const CreateNewChatButton: React.FC<Props> = ({ text, darkMode = false }: Props)
             )}
         >
             <div>
-                <img src={plus} alt="" className="h-[25px] w-[25px]" />
+                <img src={plus} alt="" className="h-6 w-6" />
             </div>
             <div>{text}</div>
         </button>

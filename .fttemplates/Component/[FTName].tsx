@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 // Components
 // Context
 // Hooks
@@ -8,7 +8,7 @@ import React from "react";
 interface Props {
 };
 
-const [FTName]: React.FC<Props> = ({}) => {
+const [FTName]: FC<Props> = ({}) => {
 
     return (
         <div>
