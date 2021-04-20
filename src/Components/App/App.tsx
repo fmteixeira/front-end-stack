@@ -1,12 +1,13 @@
-import React from "react";
+import { FC } from "react";
 // Components
+import Chat from "../../Pages/Chat/Chat";
 // Context
 // Hooks
 // Pages
 // Resources
 
-const App: React.FC = () => {
-    return <div>App Component</div>;
+const App: FC = () => {
+    return <Chat />;
 };
 
 export default App;
