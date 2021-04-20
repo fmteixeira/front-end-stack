@@ -1,3 +1,12 @@
+---
+name: Todo List
+about: Todo List
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ### Componentes
 * [ ] SettingsWrapper - https://www.figma.com/file/CS01VVLR7ArQl0afYFkNj3/Web-App?node-id=9018%3A9349
 - Requires BaseSettingsItem, UserAvatar, Button ❌
