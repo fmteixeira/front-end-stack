@@ -5,9 +5,7 @@ import { FC } from "react";
 // Pages
 // Resources
 
-export interface Props {}
-
-const Chat: FC<Props> = ({}) => {
+const Chat: FC = () => {
     return <div>Chat Component</div>;
 };
 
