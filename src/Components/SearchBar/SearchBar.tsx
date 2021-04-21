@@ -7,8 +7,8 @@ import { FC } from "react";
 
 export interface Props {}
 
-const Chat: FC<Props> = ({}) => {
-    return <div>Chat Component</div>;
+const SearchBar: FC<Props> = ({}) => {
+    return <div>SearchBar Component 1</div>;
 };
 
-export default Chat;
+export default SearchBar;
