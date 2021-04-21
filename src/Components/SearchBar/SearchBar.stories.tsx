@@ -5,27 +5,24 @@ import { withDesign } from "storybook-addon-designs";
 import SearchBar, { Props } from "./SearchBar";
 
 export default {
-  title: "SearchBar",
-  component: SearchBar,
-  decorators: [withDesign],
-  argTypes: {
-  },
+    title: "SearchBar",
+    component: SearchBar,
+    decorators: [withDesign],
+    argTypes: {},
 } as Meta;
 
 // Component Story
 const Template: Story<Props> = (args) => <SearchBar {...args} />;
 
 // Component Props
-const props: Props = {
-};
+const props: Props = {};
 
 // Component Story Node
 export const Default = Template.bind({});
 Default.args = props;
 Default.parameters = {
-  design: {
-    type: "figma",
-    url:
-      "missing_figma_url", // Figma Url
-  },
+    design: {
+        type: "figma",
+        url: "missing_figma_url", // Figma Url
+    },
 };
