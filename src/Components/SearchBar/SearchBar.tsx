@@ -6,12 +6,7 @@ import { FC } from "react";
 // Resources
 
 const SearchBar: FC = () => {
-
-    return (
-        <div>
-            SearchBar Component 2
-        </div>
-    );
+    return <div>SearchBar Component 2</div>;
 };
 
 export default SearchBar;
