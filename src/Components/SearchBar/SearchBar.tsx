@@ -5,7 +5,9 @@ import { FC } from "react";
 // Pages
 // Resources
 
-const SearchBar: FC = () => {
+export interface Props {}
+
+const SearchBar: FC<Props> = ({}) => {
     return <div>SearchBar Component 2</div>;
 };
 
