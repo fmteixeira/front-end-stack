@@ -2,7 +2,7 @@ import { FC } from "react";
 import clsx from "clsx";
 // Components
 // Media
-import plus from "../../Media/icons/plus.svg";
+import plus from "../../resources/media/icons/plus.svg";
 // Context
 // Hooks
 // Pages
