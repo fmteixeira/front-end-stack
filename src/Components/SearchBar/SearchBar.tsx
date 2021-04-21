@@ -8,7 +8,7 @@ import { FC } from "react";
 export interface Props {}
 
 const SearchBar: FC<Props> = ({}) => {
-    return <div>SearchBar Component 2</div>;
+    return <div>SearchBar Component</div>;
 };
 
 export default SearchBar;
