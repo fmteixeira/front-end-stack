@@ -23,6 +23,6 @@ Default.args = props;
 Default.parameters = {
     design: {
         type: "figma",
-        url: "missing_figma_url", // Figma Url
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=41%3A878", // Figma Url
     },
 };
