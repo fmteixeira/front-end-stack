@@ -11,8 +11,10 @@ export interface Props {}
 
 const SearchBar: FC<Props> = ({}) => {
     return (
-        <div className="bg-white-100 w-144 h-20 rounded-lg shadow-lg grid grid-cols-[auto,1fr] items-center">
-            <img className="ml-11 w-7" src={search} alt=""></img>
+        <div className="bg-white-100 h-20 rounded-lg shadow-lg grid grid-cols-[auto,1fr] items-center">
+            <div>
+                <img className="ml-11 w-7" src={search} alt=""></img>
+            </div>
             <input
                 className="w-45 h-6 mr-10 text-xl text-gray font-medium placeholder-gray focus:outline-none "
                 placeholder="Search"
