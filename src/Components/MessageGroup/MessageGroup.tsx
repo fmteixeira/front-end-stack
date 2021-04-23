@@ -5,7 +5,7 @@ import Message from "./Message";
 // Context
 // Hooks
 // Pages
-import {Msg} from "../../resources/typing/interfaces";
+import { Msg } from "../../resources/typing/interfaces";
 // Resources
 
 export interface Props {
@@ -13,7 +13,7 @@ export interface Props {
     messages: Array<Msg>;
 }
 
-const MessageGroup: FC<Props> = ({messages, userAvatar }) => {
+const MessageGroup: FC<Props> = ({ messages, userAvatar }) => {
     return (
         <div className="grid gap-5 grid-cols-[auto,1fr]">
             <div>
@@ -22,12 +22,7 @@ const MessageGroup: FC<Props> = ({messages, userAvatar }) => {
 
             <div className="grid gap-5 place-items-start">
                 {messages.map((msg, idx) => (
-                    <Message
-                        id={msg.id}
-                        text={msg.text}
-                        date={msg.date}
-                        isLast={idx + 1 === messages.length}
-                    ></Message>
+                    <Message id={msg.id} text={msg.text} date={msg.date} isLast={idx + 1 === messages.length}></Message>
                 ))}
             </div>
         </div>
