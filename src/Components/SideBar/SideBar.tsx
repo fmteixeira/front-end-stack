@@ -13,7 +13,7 @@ export interface Props {
 
 const SideBar: FC<Props> = ({ username }: Props) => {
     return (
-        <div className="bg-white-100 w-72">
+        <div className="bg-white-100 w-72 shadow-2xl">
             <SideBarHeader username={username} />
             <SideBarButtons />
         </div>

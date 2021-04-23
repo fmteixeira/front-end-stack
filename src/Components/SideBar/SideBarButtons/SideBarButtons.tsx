@@ -107,7 +107,7 @@ const SideBarButtons: FC<Props> = ({}) => {
                 <h2 className={clsx(currentNav === "Settings" ? "text-blue" : "text-gray", "font-bold")}>SETTINGS</h2>
             </div>
 
-            <div className="h-12 grid grid-cols-3 grid-cols-[3fr,3.2fr,16fr] mt-60 items-center">
+            <div className="h-12 grid grid-cols-3 grid-cols-[3fr,3.2fr,16fr] mt-64 items-center">
                 <div className="w-1 h-11 rounded-lg"></div>
                 <div>
                     <img src={logout} alt="" />
