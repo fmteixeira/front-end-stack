@@ -19,16 +19,20 @@ const Template: Story<Props> = (args) => <MessageGroup {...args} />;
 // Component Props
 const props: Props = {
     userAvatar: userAvatar,
-    mensagens: [
-        { id: 1, text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, in." },
+    messages: [
+        {
+            id: 1,
+            text:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
+            date: "21 days ago",
+        },
+
         {
             id: 2,
-            text:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quaerat quidem fuga corrupti tempora itaque unde? Voluptatem doloribus quibusdam a consectetur distinctio. Eaque molestias aperiam culpa repudiandae, blanditiis voluptatem dolores!",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
+            date: "19 days ago",
         },
-        { id: 3, text: "Lorem ipsum dolor sit amet." },
     ],
-    lastMsgTime: 100,
 };
 
 // Component Story Node

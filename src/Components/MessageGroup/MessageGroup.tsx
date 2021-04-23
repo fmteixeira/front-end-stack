@@ -1,23 +1,19 @@
 import { FC } from "react";
+import Message from "./Message";
 // Components
 //Media
-import ellipsis from "../../resources/media/icons/ellipsis.svg";
 // Context
 // Hooks
 // Pages
+import {Msg} from "../../resources/typing/interfaces";
 // Resources
 
 export interface Props {
     userAvatar: string;
-    mensagens: Array<Mensagem>;
-    lastMsgTime: number;
-}
-interface Mensagem {
-    id: number;
-    text: string;
+    messages: Array<Msg>;
 }
 
-const MessageGroup: FC<Props> = ({ mensagens, lastMsgTime, userAvatar }) => {
+const MessageGroup: FC<Props> = ({messages, userAvatar }) => {
     return (
         <div className="grid gap-5 grid-cols-[auto,1fr]">
             <div>
@@ -25,23 +21,13 @@ const MessageGroup: FC<Props> = ({ mensagens, lastMsgTime, userAvatar }) => {
             </div>
 
             <div className="grid gap-5 place-items-start">
-                {mensagens.map((mensagem, idx) => (
-                    <div key={mensagem.id} className="grid grid-cols-[1fr,auto] gap-3 place-items-center">
-                        <p
-                            className="p-3 text-base rounded-xl rounded-tl-none bg-gradient-to-r
-                                        from-blue-start to-blue-end text-white-100 shadow-lg"
-                        >
-                            {mensagem.text}
-                        </p>
-
-                        <button>
-                            <img src={ellipsis} alt="" />
-                        </button>
-
-                        {idx + 1 === mensagens.length && (
-                            <span className="text-gray opacity-70 text-sm place-self-end">{lastMsgTime} days ago</span>
-                        )}
-                    </div>
+                {messages.map((msg, idx) => (
+                    <Message
+                        id={msg.id}
+                        text={msg.text}
+                        date={msg.date}
+                        isLast={idx + 1 === messages.length}
+                    ></Message>
                 ))}
             </div>
         </div>
