@@ -30,7 +30,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave }: Props) => {
                     className={clsx(
                         active ? "bg-blue" : "bg-transparent",
                         " w-1 h-11 rounded-lg",
-                        "transition ease-out duration-500",
+                        "transition ease-in-out duration-500",
                     )}
                 ></div>
                 <div>
@@ -40,7 +40,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave }: Props) => {
                     className={clsx(
                         active ? "text-blue" : "text-gray",
                         "font-bold",
-                        "transition ease-out duration-500",
+                        "transition ease-in-out duration-500",
                         "col-start-4",
                     )}
                 >
