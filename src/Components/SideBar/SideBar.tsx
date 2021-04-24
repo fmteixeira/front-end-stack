@@ -9,12 +9,13 @@ import SideBarButtons from "./SideBarButtons/SideBarButtons";
 
 export interface Props {
     username: string;
+    avatarUrl: string;
 }
 
-const SideBar: FC<Props> = ({ username }: Props) => {
+const SideBar: FC<Props> = ({ username, avatarUrl }: Props) => {
     return (
-        <div className="bg-white-100 w-72 shadow-2xl">
-            <SideBarHeader username={username} />
+        <div className="bg-white-100 w-72 grid shadow-2xl">
+            <SideBarHeader username={username} avatarUrl={avatarUrl} />
             <SideBarButtons />
         </div>
     );
