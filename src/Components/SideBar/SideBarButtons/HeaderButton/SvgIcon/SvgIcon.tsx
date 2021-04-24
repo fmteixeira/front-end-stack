@@ -48,7 +48,16 @@ const SvgIcon: FC<Props> = ({ index, active }: Props) => {
     return (
         <div>
             <img className="absolute" src={icons[index + 7]} alt="" />
-            <img className={clsx(active ? "opacity-0" : "opacity-100","transition-all duration-700","ease-linear","relative")} src={icons[index]} alt="" />
+            <img
+                className={clsx(
+                    active ? "opacity-0" : "opacity-100",
+                    "transition-all duration-700",
+                    "ease-linear",
+                    "relative",
+                )}
+                src={icons[index]}
+                alt=""
+            />
         </div>
     );
 };
