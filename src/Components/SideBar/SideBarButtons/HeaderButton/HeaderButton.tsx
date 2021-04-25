@@ -13,9 +13,10 @@ interface Props {
     active: boolean;
     setNav: Function;
     chave: number;
+    icon: string;
 }
 
-const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave }: Props) => {
+const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave, icon }: Props) => {
     const clickEvent = () => {
         setNav();
     };
@@ -34,7 +35,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave }: Props) => {
                     )}
                 ></div>
                 <div>
-                    <SvgIcon active={active} index={chave} />
+                    <SvgIcon active={active} index={chave} svg={icon}/>
                 </div>
                 <h2
                     className={clsx(
