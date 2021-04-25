@@ -5,12 +5,12 @@ import Message from "./Message";
 // Context
 // Hooks
 // Pages
-import { Msg } from "../../resources/typing/interfaces";
+import { Message as MessageInterface } from "../../resources/typing/interfaces";
 // Resources
 
 export interface Props {
     userAvatar: string;
-    messages: Array<Msg>;
+    messages: Array<MessageInterface>;
 }
 
 const MessageGroup: FC<Props> = ({ messages, userAvatar }) => {
@@ -22,7 +22,7 @@ const MessageGroup: FC<Props> = ({ messages, userAvatar }) => {
 
             <div className="grid gap-5 place-items-start">
                 {messages.map((msg, idx) => (
-                    <Message id={msg.id} text={msg.text} date={msg.date} isLast={idx + 1 === messages.length}></Message>
+                    <Message key={msg.id} text={msg.text} date={msg.date} isLast={idx + 1 === messages.length}></Message>
                 ))}
             </div>
         </div>
