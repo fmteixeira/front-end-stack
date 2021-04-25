@@ -35,7 +35,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave, icon }: Props)
                     )}
                 ></div>
                 <div>
-                    <SvgIcon active={active} index={chave} svg={icon}/>
+                    <SvgIcon active={active} index={chave} svg={icon} />
                 </div>
                 <h2
                     className={clsx(

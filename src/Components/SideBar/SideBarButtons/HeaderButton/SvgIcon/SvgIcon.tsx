@@ -16,20 +16,60 @@ import { ReactComponent as LogoutSVG } from "../../../../../resources/media/icon
 interface Props {
     index: number;
     active: boolean;
-    svg: string
+    svg: string;
 }
 
 const SvgIcon: FC<Props> = ({ index, active, svg }: Props) => {
-    console.log(svg)
+    console.log(svg);
     return (
         <div className="transition-all ease-in-out duration-1000">
-            {svg === "static/media/home.04fa869f.svg" ? <HomeSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
-            {svg === "static/media/chat.6230b207.svg" ? <ChatSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
-            {svg === "static/media/contact.46e7534d.svg" ? <ContactSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
-            {svg === "static/media/notification.84656871.svg" ? <NotificationSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
-            {svg === "static/media/calendar.67648b13.svg" ? <CalendarSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
-            {svg === "static/media/setting.6d5bdf40.svg" ? <SettingSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
-            {svg === "static/media/logout.f378d49e.svg" ? <LogoutSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" /> : ""}
+            {svg === "static/media/home.04fa869f.svg" ? (
+                <HomeSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" />
+            ) : (
+                ""
+            )}
+            {svg === "static/media/chat.6230b207.svg" ? (
+                <ChatSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" />
+            ) : (
+                ""
+            )}
+            {svg === "static/media/contact.46e7534d.svg" ? (
+                <ContactSVG
+                    fill={active ? "#2A8BF2" : "#707C97"}
+                    className="transition-all ease-in-out duration-1000"
+                />
+            ) : (
+                ""
+            )}
+            {svg === "static/media/notification.84656871.svg" ? (
+                <NotificationSVG
+                    fill={active ? "#2A8BF2" : "#707C97"}
+                    className="transition-all ease-in-out duration-1000"
+                />
+            ) : (
+                ""
+            )}
+            {svg === "static/media/calendar.67648b13.svg" ? (
+                <CalendarSVG
+                    fill={active ? "#2A8BF2" : "#707C97"}
+                    className="transition-all ease-in-out duration-1000"
+                />
+            ) : (
+                ""
+            )}
+            {svg === "static/media/setting.6d5bdf40.svg" ? (
+                <SettingSVG
+                    fill={active ? "#2A8BF2" : "#707C97"}
+                    className="transition-all ease-in-out duration-1000"
+                />
+            ) : (
+                ""
+            )}
+            {svg === "static/media/logout.f378d49e.svg" ? (
+                <LogoutSVG fill={active ? "#2A8BF2" : "#707C97"} className="transition-all ease-in-out duration-1000" />
+            ) : (
+                ""
+            )}
         </div>
     );
 };
