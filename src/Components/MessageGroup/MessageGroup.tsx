@@ -22,7 +22,12 @@ const MessageGroup: FC<Props> = ({ messages, userAvatar }) => {
 
             <div className="grid gap-5 place-items-start">
                 {messages.map((msg, idx) => (
-                    <Message key={msg.id} text={msg.text} date={msg.date} isLast={idx + 1 === messages.length}></Message>
+                    <Message
+                        key={msg.id}
+                        text={msg.text}
+                        date={msg.date}
+                        isLast={idx + 1 === messages.length}
+                    ></Message>
                 ))}
             </div>
         </div>
