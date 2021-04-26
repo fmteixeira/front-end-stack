@@ -12,37 +12,40 @@ interface Props {
     titulo: string;
     active: boolean;
     setNav: Function;
-    chave: number;
     icon: string;
 }
 
-const HeaderButton: FC<Props> = ({ titulo, active, setNav, chave, icon }: Props) => {
+const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
     const clickEvent = () => {
         setNav();
     };
 
     return (
-        <div className="last:pt-72">
+        <div className="last:pt-72 m-auto md:m-0">
             <button
                 onClick={() => clickEvent()}
-                className="h-12 grid grid-cols-4 grid-cols-[2fr,1fr,0.5fr,auto] items-center focus:outline-none"
+                className="h-12 grid grid-cols-1 md:grid-cols-[2fr,1fr,0.5fr,auto] items-center focus:outline-none justify-center"
             >
                 <div
                     className={clsx(
                         active ? "bg-blue" : "bg-transparent",
                         " w-1 h-11 rounded-lg",
                         "transition ease-in-out duration-500",
+                        "hidden",
+                        "md:block",
                     )}
                 ></div>
                 <div>
-                    <SvgIcon active={active} index={chave} svg={icon} />
+                    <SvgIcon active={active} svg={icon} />
                 </div>
                 <h2
                     className={clsx(
                         active ? "text-blue" : "text-gray",
                         "font-bold",
                         "transition ease-in-out duration-500",
-                        "col-start-4",
+                        "md:col-start-4",
+                        "hidden",
+                        "md:block",
                     )}
                 >
                     {titulo}

@@ -42,7 +42,6 @@ const SideBarButtons: FC<Props> = ({}) => {
                     return (
                         <HeaderButton
                             key={index}
-                            chave={index}
                             setNav={() => setCurrentNav(index)}
                             active={currentNav === index}
                             titulo={button.text}
