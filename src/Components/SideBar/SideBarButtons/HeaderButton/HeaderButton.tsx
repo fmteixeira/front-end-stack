@@ -24,18 +24,16 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
         <div className="last:pt-72 m-auto md:m-0">
             <button
                 onClick={() => clickEvent()}
-                className="h-12 grid grid-cols-1 md:grid-cols-[2fr,1fr,0.5fr,auto] items-center focus:outline-none justify-center"
+                className="h-12 grid grid-cols-3 md:grid-cols-[2fr,1fr,0.5fr,auto] items-center focus:outline-none "
             >
                 <div
                     className={clsx(
                         active ? "bg-blue" : "bg-transparent",
                         " w-1 h-11 rounded-lg",
                         "transition ease-in-out duration-500",
-                        "hidden",
-                        "md:block",
                     )}
                 ></div>
-                <div>
+                <div className="col-start-2 col-end-3">
                     <SvgIcon active={active} svg={icon} />
                 </div>
                 <h2
