@@ -44,6 +44,10 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
       },
+
+      boxShadow: {
+        blueShadow: "1px 0px 10px rgba(42, 139, 242, 0.45), 0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75)",
+      }
     },
   },
 

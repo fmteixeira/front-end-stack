@@ -28,7 +28,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
             >
                 <div
                     className={clsx(
-                        active ? "bg-blue" : "bg-transparent",
+                        active ? "bg-blue shadow-blueShadow" : "bg-transparent",
                         " w-1 h-11 rounded-lg",
                         "transition ease-in-out duration-500",
                     )}
