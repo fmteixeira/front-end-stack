@@ -1,6 +1,8 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
+// Media
+import chatHeaderAvatar from "../../resources/media/icons/chatHeaderAvatar.svg"
 // Component
 import ChatHeader, { Props } from "./ChatHeader";
 
@@ -17,6 +19,8 @@ const Template: Story<Props> = (args) => <ChatHeader {...args} />;
 
 // Component Props
 const props: Props = {
+  avatarIcon: chatHeaderAvatar,
+  nome: "Nika Jerrardo",
 };
 
 // Component Story Node
