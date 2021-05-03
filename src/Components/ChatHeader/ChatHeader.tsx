@@ -6,6 +6,8 @@ import { FC } from "react";
 // Resources
 
 export interface Props {
+    avatarIcon: string,
+    nome: string
 };
 
 const ChatHeader: FC<Props> = ({}) => {

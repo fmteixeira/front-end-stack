@@ -26,6 +26,6 @@ Default.parameters = {
   design: {
     type: "figma",
     url:
-      "missing_figma_url", // Figma Url
+      "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=616%3A651", // Figma Url
   },
 };
