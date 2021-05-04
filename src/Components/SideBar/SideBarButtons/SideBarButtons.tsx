@@ -3,32 +3,16 @@ import { FC, useState } from "react";
 import HeaderButton from "./HeaderButton/HeaderButton";
 // Context
 // Media
-import Calendar from "../../../resources/media/icons/sidebar/calendar.svg";
-import Chat from "../../../resources/media/icons/sidebar/chat.svg";
-import Home from "../../../resources/media/icons/sidebar/home.svg";
-import Notification from "../../../resources/media/icons/sidebar/notification.svg";
-import Setting from "../../../resources/media/icons/sidebar/setting.svg";
-import Contact from "../../../resources/media/icons/sidebar/contact.svg";
-import Logout from "../../../resources/media/icons/sidebar/logout.svg";
-
+import HomeIcon from "../../../resources/media/icons/sidebar/HomeIcon/HomeIcon";
+import ChatIcon from "../../../resources/media/icons/sidebar/ChatIcon/ChatIcon";
+import ContactIcon from "../../../resources/media/icons/sidebar/ContactIcon/ContactIcon";
+import NotificationIcon from "../../../resources/media/icons/sidebar/NotificationIcon/NotificationIcon";
+import CalendarIcon from "../../../resources/media/icons/sidebar/CalendarIcon/CalendarIcon";
+import SettingIcon from "../../../resources/media/icons/sidebar/SettingIcon/SettingIcon";
+import LogoutIcon from "../../../resources/media/icons/sidebar/LogoutIcon/LogoutIcon";
 // Hooks
 // Pages
 // Resources
-
-interface Button {
-    text: string;
-    icon: string;
-}
-
-const buttons: Button[] = [
-    { text: "HOME", icon: Home },
-    { text: "CHAT", icon: Chat },
-    { text: "CONTACT", icon: Contact },
-    { text: "NOTIFICATIONS", icon: Notification },
-    { text: "CALENDAR", icon: Calendar },
-    { text: "SETTINGS", icon: Setting },
-    { text: "LOG OUT", icon: Logout },
-];
 
 export interface Props {}
 
@@ -38,17 +22,48 @@ const SideBarButtons: FC<Props> = ({}) => {
     return (
         <div className="h-212">
             <div className="grid pt-16 gap-y-5">
-                {buttons.map(function (button, index) {
-                    return (
-                        <HeaderButton
-                            key={index}
-                            setNav={() => setCurrentNav(index)}
-                            active={currentNav === index}
-                            titulo={button.text}
-                            icon={button.icon}
-                        />
-                    );
-                })}
+                <HeaderButton
+                    setNav={() => setCurrentNav(0)}
+                    active={currentNav === 0}
+                    titulo={"HOME"}
+                    icon={<HomeIcon active={currentNav === 0} />}
+                />
+                <HeaderButton
+                    setNav={() => setCurrentNav(1)}
+                    active={currentNav === 1}
+                    titulo={"CHAT"}
+                    icon={<ChatIcon active={currentNav === 1} />}
+                />
+                <HeaderButton
+                    setNav={() => setCurrentNav(2)}
+                    active={currentNav === 2}
+                    titulo={"CONTACT"}
+                    icon={<ContactIcon active={currentNav === 2} />}
+                />
+                <HeaderButton
+                    setNav={() => setCurrentNav(3)}
+                    active={currentNav === 3}
+                    titulo={"NOTIFICATIONS"}
+                    icon={<NotificationIcon active={currentNav === 3} />}
+                />
+                <HeaderButton
+                    setNav={() => setCurrentNav(4)}
+                    active={currentNav === 4}
+                    titulo={"CALENDAR"}
+                    icon={<CalendarIcon active={currentNav === 4} />}
+                />
+                <HeaderButton
+                    setNav={() => setCurrentNav(5)}
+                    active={currentNav === 5}
+                    titulo={"SETTINGS"}
+                    icon={<SettingIcon active={currentNav === 5} />}
+                />
+                <HeaderButton
+                    setNav={() => setCurrentNav(6)}
+                    active={currentNav === 6}
+                    titulo={"LOG OUT"}
+                    icon={<LogoutIcon active={currentNav === 6} />}
+                />
             </div>
         </div>
     );

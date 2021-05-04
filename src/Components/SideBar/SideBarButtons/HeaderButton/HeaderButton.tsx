@@ -1,7 +1,6 @@
 import { FC } from "react";
 import clsx from "clsx";
 // Components
-import SvgIcon from "./SvgIcon/SvgIcon";
 // Context
 // Media
 // Hooks
@@ -12,7 +11,7 @@ interface Props {
     titulo: string;
     active: boolean;
     setNav: Function;
-    icon: string;
+    icon: JSX.Element;
 }
 
 const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
@@ -33,9 +32,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
                         "transition ease-in-out duration-500",
                     )}
                 ></div>
-                <div className="col-start-2 col-end-3">
-                    <SvgIcon active={active} svg={icon} />
-                </div>
+                <div className="col-start-2 col-end-3">{icon}</div>
                 <h2
                     className={clsx(
                         active ? "text-blue" : "text-gray",
