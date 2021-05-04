@@ -5,11 +5,10 @@ import { withDesign } from "storybook-addon-designs";
 import DayLine, { Props } from "./DayLine";
 
 export default {
-  title: "DayLine",
-  component: DayLine,
-  decorators: [withDesign],
-  argTypes: {
-  },
+    title: "DayLine",
+    component: DayLine,
+    decorators: [withDesign],
+    argTypes: {},
 } as Meta;
 
 // Component Story
@@ -17,15 +16,15 @@ const Template: Story<Props> = (args) => <DayLine {...args} />;
 
 // Component Props
 const props: Props = {
+    date: new Date(2021, 3, 2),
 };
 
 // Component Story Node
 export const Default = Template.bind({});
 Default.args = props;
 Default.parameters = {
-  design: {
-    type: "figma",
-    url:
-      "missing_figma_url", // Figma Url
-  },
+    design: {
+        type: "figma",
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=616%3A657", // Figma Url
+    },
 };
