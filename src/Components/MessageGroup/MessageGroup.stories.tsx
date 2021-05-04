@@ -24,13 +24,12 @@ const props: Props = {
             id: 1,
             text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
-            date: "21 days ago",
+            date: new Date(2000, 4, 20, 12, 30),
         },
-
         {
             id: 2,
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
-            date: "19 days ago",
+            date: new Date(2021, 4, 4, 13, 30),
         },
     ],
 };

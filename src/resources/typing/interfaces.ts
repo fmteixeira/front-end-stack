@@ -5,5 +5,5 @@ export interface Example {
 export interface Message {
     readonly id: number;
     readonly text: string;
-    readonly date: string;
+    readonly date: Date;
 }
