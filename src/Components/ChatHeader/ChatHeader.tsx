@@ -12,11 +12,11 @@ import { ReactComponent as VerticalDots } from "../../resources/media/icons/vert
 
 export interface Props {
     avatarIcon: string;
-    nome: string;
+    name: string;
     date?: Date | undefined;
 }
 
-const ChatHeader: FC<Props> = ({ avatarIcon, nome, date }: Props) => {
+const ChatHeader: FC<Props> = ({ avatarIcon, name, date }: Props) => {
     const onlineTime = (): string => {
         if (date) {
             return moment() >= moment(date) ? "last online " + moment(date).fromNow() : "Offline";
@@ -46,7 +46,7 @@ const ChatHeader: FC<Props> = ({ avatarIcon, nome, date }: Props) => {
                 </div>
             </div>
             <div>
-                <h2 className="font-bold text-sm sm:text-base">{nome}</h2>
+                <h2 className="font-bold text-sm sm:text-base">{name}</h2>
                 <p className="text-blue text-xs font-semibold">{onlineTime()}</p>
             </div>
             <div>
