@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   mode: "jit",
@@ -14,6 +16,7 @@ module.exports = {
       dark: "var(--color-dark)",
       blue: "var(--color-blue)",
       pink: "var(--color-pink)",
+      green: colors.green,
       gray: "var(--color-gray)",
       white: {
         100: "var(--color-white-100)",

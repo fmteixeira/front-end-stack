@@ -16,8 +16,16 @@ export default {
 // Component Story
 const Template: Story<Props> = (args) => <ChatHeader {...args} />;
 
+const SemDataTemplate: Story<Props> = (args) => <ChatHeader {...args} />;
+
 // Component Props
 const props: Props = {
+    avatarIcon: chatHeaderAvatar,
+    nome: "Nika Jerrardo",
+    date: new Date(2021, 4, 4, 14, 30),
+};
+
+const semDataProps: Props = {
     avatarIcon: chatHeaderAvatar,
     nome: "Nika Jerrardo",
 };
@@ -26,6 +34,15 @@ const props: Props = {
 export const Default = Template.bind({});
 Default.args = props;
 Default.parameters = {
+    design: {
+        type: "figma",
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=616%3A651", // Figma Url
+    },
+};
+
+export const SemData = SemDataTemplate.bind({});
+SemData.args = semDataProps;
+SemData.parameters = {
     design: {
         type: "figma",
         url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=616%3A651", // Figma Url
