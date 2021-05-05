@@ -2,6 +2,7 @@ import { FC } from "react";
 // Components
 //Media
 import ellipsis from "../../resources/media/icons/ellipsis.svg";
+import MessageLastDate from "./MessageLastDate";
 // Context
 // Hooks
 // Pages
@@ -9,7 +10,7 @@ import ellipsis from "../../resources/media/icons/ellipsis.svg";
 
 interface Props {
     text: string;
-    date: string;
+    date: Date;
     isLast: boolean;
 }
 
@@ -27,7 +28,7 @@ const Message: FC<Props> = ({ text, date, isLast }) => {
                 <img src={ellipsis} alt="" />
             </button>
 
-            {isLast && <span className="text-gray opacity-70 text-sm place-self-end">{date}</span>}
+            {isLast && <MessageLastDate date={date}> </MessageLastDate>}
         </div>
     );
 };
