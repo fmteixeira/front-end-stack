@@ -27,9 +27,23 @@ const props: Props = {
             date: new Date(2000, 4, 20, 12, 30),
         },
         {
+            
             id: 2,
+            text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, debitis.",
+            date: new Date(2000, 4, 20, 11, 30),
+            fileName: "imagem1.jpg",
+            fileSize: "2 Gb",
+        },
+        {
+            id: 3,
+            date: new Date(2000, 4, 20, 12, 30),
+            fileName: "texto125.txt",
+            fileSize: "178 Kb",
+        },
+        {
+            id: 4,
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
-            date: new Date(2021, 4, 4, 13, 30),
+            date: new Date(2021, 4, 5, 13, 30),
         },
     ],
 };

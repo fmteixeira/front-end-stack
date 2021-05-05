@@ -7,3 +7,11 @@ export interface Message {
     readonly text: string;
     readonly date: Date;
 }
+
+export interface MessageFile{
+    readonly id:number;
+    readonly date: Date;
+    readonly text?: string;
+    readonly fileName: string;
+    readonly fileSize: string;
+}
