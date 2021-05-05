@@ -16,7 +16,7 @@ const Template: Story<Props> = (args) => <DayLine {...args} />;
 
 // Component Props
 const props: Props = {
-    date: new Date(2021, 3, 2),
+    date: new Date(2021, 4, 3),
 };
 
 // Component Story Node
