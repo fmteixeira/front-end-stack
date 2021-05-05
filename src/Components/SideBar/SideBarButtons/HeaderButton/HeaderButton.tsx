@@ -23,7 +23,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
         <div className="last:pt-72 m-auto md:m-0">
             <button
                 onClick={() => clickEvent()}
-                className="h-12 grid grid-cols-3 md:grid-cols-[2fr,1fr,0.5fr,auto] items-center focus:outline-none "
+                className="h-12 w-full grid grid-cols-3 md:grid-cols-[1fr,auto,0.5fr,5fr] items-center focus:outline-none  "
             >
                 <div
                     className={clsx(
@@ -39,6 +39,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
                         "font-bold",
                         "transition ease-in-out duration-500",
                         "md:col-start-4",
+                        "mr-auto",
                         "hidden",
                         "md:block",
                     )}
