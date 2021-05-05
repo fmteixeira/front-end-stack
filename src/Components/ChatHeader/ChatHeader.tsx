@@ -2,8 +2,8 @@ import { FC } from "react";
 // Components
 // Context
 // Media
-import pin from "../../resources/media/icons/pin.svg";
-import verticalDots from "../../resources/media/icons/verticalDots.svg";
+import {ReactComponent as PinComponent} from "../../resources/media/icons/pin.svg";
+import {ReactComponent as VerticalDots} from "../../resources/media/icons/verticalDots.svg";
 // Hooks
 // Pages
 // Resources
@@ -24,13 +24,13 @@ const ChatHeader: FC<Props> = ({ avatarIcon, nome }: Props) => {
                 <p className="text-blue text-xs font-semibold">last online 5 hours ago</p>
             </div>
             <div>
-                <button className="bg-white-100 w-8 h-8 sm:w-11 sm:h-11 rounded-full shadow-buttonShadow grid items-center justify-items-center focus:outline-none">
-                    <img className="transform scale-75 sm:scale-100" alt="" src={pin} />
+                <button className="bg-gradient-to-br from-white-100 to-white-100 hover:from-blue-start hover:to-blue-end group w-8 h-8 sm:w-11 sm:h-11 rounded-full shadow-buttonShadow grid items-center justify-items-center outline-none focus:outline-none">
+                    <PinComponent className="transform scale-75 sm:scale-100 fill-current text-gray group-hover:text-white-100 transition ease-in-out duration-500"/>
                 </button>
             </div>
             <div>
-                <button className="bg-white-100 w-8 h-8 sm:w-11 sm:h-11 rounded-full shadow-buttonShadow grid items-center justify-items-center focus:outline-none">
-                    <img className="transform scale-75 sm:scale-100" alt="" src={verticalDots} />
+                <button className="bg-gradient-to-br from-white-100 to-white-100 hover:from-blue-start hover:to-blue-end group w-8 h-8 sm:w-11 sm:h-11 rounded-full shadow-buttonShadow grid items-center justify-items-center outline-none focus:outline-none">
+                    <VerticalDots className="transform scale-75 sm:scale-100 fill-current text-gray group-hover:text-white-100 transition ease-in-out duration-500"/>
                 </button>
             </div>
         </div>
