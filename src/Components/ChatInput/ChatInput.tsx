@@ -17,17 +17,19 @@ const ChatInput: FC<Props> = ({}) => {
     const [message, setMessage] = useState("")
     const [showAttachments, setShowAttachments] = useState(false);
     const [showEmojis, setShowEmojis] = useState(false); 
-    const [cursorPlace, setCursorPlace] = useState(0); 
+    const [cursorPlace, setCursorPlace] = useState<[number, number]>([0,0]); 
 
-    const onFocusInput = (event:React.SyntheticEvent) => {
+    const onSelectInput = (event:React.SyntheticEvent) => {
         let target = event.target as HTMLInputElement
-        typeof target.selectionStart === "number" && setCursorPlace(target.selectionStart)
+        typeof target.selectionStart === "number" && 
+        typeof target.selectionEnd === "number" && 
+        setCursorPlace([target.selectionStart, target.selectionEnd])
     }
    
     const onEmojiClick = (event:any, emojiObject:any)=>{
-        let newMensagem = message.slice(0, cursorPlace) + emojiObject.emoji + message.slice(cursorPlace);
+        let newMensagem = message.slice(0, cursorPlace[0]) + emojiObject.emoji + message.slice(cursorPlace[1]);
         setMessage(newMensagem)
-        console.log(cursorPlace)
+        setCursorPlace([cursorPlace[0] + 2,cursorPlace[0] + 2 ])
     }
 
     const onPlusClick = () => {
@@ -56,7 +58,7 @@ const ChatInput: FC<Props> = ({}) => {
                     type="text"
                     placeholder="Type a message here"
                     value={message}
-                    onSelect={(event) => onFocusInput(event)}
+                    onSelect={(event) => onSelectInput(event)}
                     onChange={(event) => setMessage(event.target.value)}
                 ></input>
 
@@ -69,7 +71,6 @@ const ChatInput: FC<Props> = ({}) => {
                     </button>
                 </div>
             </div>
-            {cursorPlace}
         </div>
     );
 };
