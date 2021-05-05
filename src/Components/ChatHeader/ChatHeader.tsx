@@ -13,19 +13,16 @@ import { ReactComponent as VerticalDots } from "../../resources/media/icons/vert
 export interface Props {
     avatarIcon: string;
     nome: string;
-    date?: Date | undefined
+    date?: Date | undefined;
 }
 
 const ChatHeader: FC<Props> = ({ avatarIcon, nome, date }: Props) => {
-
     const onlineTime = (): string => {
-        if(date){
-            return moment() >= moment(date) ? "last online " + moment(date).fromNow() : "Offline"
+        if (date) {
+            return moment() >= moment(date) ? "last online " + moment(date).fromNow() : "Offline";
+        } else {
+            return "Online";
         }
-        else{
-            return "Online"
-        }
-        
     };
 
     onlineTime();
@@ -34,7 +31,17 @@ const ChatHeader: FC<Props> = ({ avatarIcon, nome, date }: Props) => {
         <div className="bg-white-100 rounded-t-md w-full h-24 grid grid-cols-[auto,1fr,auto,auto] gap-x-4 pl-4 pr-4 sm:pl-12 sm:pr-8 items-center">
             <div className="ml-auto w-10 h-10 relative">
                 <img className="rounded-full absolute" alt="" src={avatarIcon} />
-                <div className={clsx( date ? "invisible" : "visible", "absolute", "w-3 h-3", "rounded-full", "bg-white-100", "mt-7 ml-7", "flex justify-center items-center")}>
+                <div
+                    className={clsx(
+                        date ? "invisible" : "visible",
+                        "absolute",
+                        "w-3 h-3",
+                        "rounded-full",
+                        "bg-white-100",
+                        "mt-7 ml-7",
+                        "flex justify-center items-center",
+                    )}
+                >
                     <span className="w-2 h-2 absolute bg-green-600 rounded-full"></span>
                 </div>
             </div>
