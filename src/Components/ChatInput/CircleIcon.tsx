@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import clsx from "clsx";
 // Components
 // Context
@@ -8,23 +8,25 @@ import clsx from "clsx";
 // Resources
 
 export interface Props {
-    icon: string | JSX.Element;
+    icon: string;
     gradient: boolean;
 }
 
-const CircleIcon: FC<Props> = ({ icon, gradient }) => {
+const CircleIcon: FC<Props> = ({ icon, gradient}) => {
+
+    const [active, setActive] = useState(false)
+
     return (
-        <div
+        <div onMouseEnter={() => setActive(true)} onMouseLeave={()=> setActive(false)}
             className={clsx(
-                "h-10 w-10 rounded-full",
-                gradient
-                    ? "bg-gradient-to-r from-blue-start to-blue-end hover:from-white-100 hover:to-white-100"
-                    : "bg-blue hover:bg-white-100",
-                "grid place-items-center",
+                "h-10 w-10 rounded-full grid place-items-center ",
+                active
+                    ? "bg-white-100 border-blue border-solid border-2" 
+                    : gradient ? "bg-gradient-to-r from-blue-start to-blue-end" : "bg-blue"
             )}
         >
              <div>
-                 {icon}
+                 <img className={clsx(active ? "": "filter brightness-0 invert")} src={icon} alt=""></img>
             </div>
         </div>
     );

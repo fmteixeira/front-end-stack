@@ -4,8 +4,7 @@ import CircleIcon from "./CircleIcon";
 // Context
 // Hooks
 // Pages
-import FileIcon from "../../resources/media/icons/FileIcon";
-import ImageIcon from "../../resources/media/icons/ImageIcon"
+
 import file from "../../resources/media/icons/file.svg";
 import video from "../../resources/media/icons/video.svg";
 import image from "../../resources/media/icons/image.svg";
@@ -21,10 +20,10 @@ const Attachment: FC<Props> = ({}) => {
                 <CircleIcon icon={video} gradient={false} />
             </button>
             <button>
-                <CircleIcon icon={<ImageIcon active={true} />} gradient={false} />
+                <CircleIcon icon={image} gradient={false} />
             </button>
             <button>
-                <CircleIcon icon={<FileIcon active={true} />} gradient={false} />
+                <CircleIcon icon={file} gradient={false} />
             </button>
         </div>
     );
