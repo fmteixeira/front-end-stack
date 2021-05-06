@@ -4,6 +4,8 @@ import CircleIcon from "./CircleIcon";
 // Context
 // Hooks
 // Pages
+import FileIcon from "../../resources/media/icons/FileIcon";
+import ImageIcon from "../../resources/media/icons/ImageIcon"
 import file from "../../resources/media/icons/file.svg";
 import video from "../../resources/media/icons/video.svg";
 import image from "../../resources/media/icons/image.svg";
@@ -16,13 +18,13 @@ const Attachment: FC<Props> = ({}) => {
     return (
         <div className="z-50 grid justify-items-start gap-y-2">
             <button>
-                <CircleIcon icon={video} gradient={false}></CircleIcon>
+                <CircleIcon icon={video} gradient={false} />
             </button>
             <button>
-                <CircleIcon icon={image} gradient={false}></CircleIcon>
+                <CircleIcon icon={<ImageIcon active={true} />} gradient={false} />
             </button>
             <button>
-                <CircleIcon icon={file} gradient={false}></CircleIcon>
+                <CircleIcon icon={<FileIcon active={true} />} gradient={false} />
             </button>
         </div>
     );
