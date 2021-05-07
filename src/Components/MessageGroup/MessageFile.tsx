@@ -24,7 +24,7 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, isActi
     return (
         <div
             className={clsx(
-                "grid gap-3",
+                "grid gap-3 items-center",
                 isActiveUser ? "grid-cols-[auto,1fr]" : "grid-cols-[1fr,auto]",
             )}
         >
