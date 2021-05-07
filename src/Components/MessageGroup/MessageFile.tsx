@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { FC } from "react";
 // Components
 //Media
@@ -15,45 +16,63 @@ interface Props {
     isLast: boolean;
     text?: string;
     fileName: string;
-    fileSize:string
+    fileSize: string;
+    isActiveUser: boolean;
 }
 
-const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize}) => {
+const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, isActiveUser }) => {
     return (
-        <div className="grid grid-cols-[1fr,auto] gap-3 place-items-center">
+        <div
+            className={clsx(
+                "grid gap-3",
+                isActiveUser ? "grid-cols-[auto,1fr]" : "grid-cols-[1fr,auto]",
+            )}
+        >
             <div
-                className="p-3 text-base rounded-xl rounded-tl-none bg-gradient-to-r
-                            from-blue-start to-blue-end text-white-100 shadow-lg"
+                className={clsx(
+                    "p-3 rounded-xl shadow-lg ",
+                    isActiveUser
+                        ? "rounded-br-none bg-white-100 text-gray border-solid border-gray border-2 border-opacity-25 order-2"
+                        : " rounded-tl-none bg-gradient-to-r from-blue-start to-blue-end text-white-100 ",
+                )}
             >
-            { text === undefined ?
-            <button className="grid grid-cols-[auto,1fr] gap-x-3 place-items-center">    
+                {text === undefined ? (
+                    <button className={clsx("grid grid-cols-[auto,1fr] gap-x-3 items-center")}>
+                        <div
+                            className={clsx(
+                                isActiveUser ? "bg-gray order-2" : "bg-white-100",
+                                "h-10 w-10 grid place-items-center rounded-md bg-opacity-25",
+                            )}
+                        >
+                            <img src={file} alt=""></img>
+                        </div>
 
-                <div className="h-10 w-10 bg-white-100 bg-opacity-25 grid place-items-center rounded-md">
-                    <img src={file} alt=""></img>
-                </div>
-
-                <div className="grid grid-cols-[auto] items-start text-left">
-                    <span>{fileName}</span>                    
-                    <span className="text-sm">{fileSize}</span>
-                </div>
-            </button>
-            :
-            <div className="grid gap-y-1"> 
-                <p>{text}</p>
-                <button className="grid grid-cols-[auto,1fr] items-start">
-                    <img src={file} alt=""/>
-                    <span className="text-left">({fileSize}) {fileName}</span>
-                </button>
+                        <div className={clsx("grid grid-cols-[auto] items-start",
+                        isActiveUser ? "text-right" :"text-left")}>
+                            <span>{fileName}</span>
+                            <span className="text-sm">{fileSize}</span>
+                        </div>
+                    </button>
+                ) : (
+                    <div className="grid gap-y-1">
+                        <p className={clsx(isActiveUser && "text-right")}>{text}</p>
+                        <button className="grid grid-cols-[auto,1fr] items-start justify-self-end">
+                            <img src={file} alt="" />
+                            <span className={clsx(isActiveUser && "text-blue","text-left")}>
+                                ({fileSize}) {fileName}
+                            </span>
+                        </button>
+                    </div>
+                )}
             </div>
-            }
 
-            </div>
-
-            <button>
+            <button className={clsx(isActiveUser && "order-1")}>
                 <img src={ellipsis} alt="" />
             </button>
 
-            {isLast && <MessageLastDate date={date} />}
+            <div className={clsx(isActiveUser && "order-3 col-start-2 justify-self-start")}>
+                {isLast && <MessageLastDate date={date} />}
+            </div>
         </div>
     );
 };
