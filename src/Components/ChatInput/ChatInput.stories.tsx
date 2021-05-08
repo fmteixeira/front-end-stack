@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 // Component Story
-const Template: Story<Props> = (args) => <ChatInput {...args} />;
+const Template: Story<Props> = (args) => <div className="h-96 grid items-end"><ChatInput {...args} /></div> ;
 
 // Component Props
 const props: Props = {};

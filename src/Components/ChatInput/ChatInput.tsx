@@ -43,13 +43,18 @@ const ChatInput: FC<Props> = ({}) => {
     };
 
     return (
-        <div className="grid gap-y-2">
-            <div className="grid grid-cols-[auto,auto]">
-                <div className="self-end">{showAttachments && <Attachment />}</div>
-                <div className="justify-self-end">
-                    {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
-                </div>
+        <div className="relative">
+            <div className="absolute bottom-12 ">
+                {showAttachments && <Attachment />}
+                
             </div>
+            <div className="absolute right-0 bottom-12">
+                {showEmojis && 
+                <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />
+                }
+            </div>
+
+
             <div className="grid grid-cols-[auto,1fr,auto] gap-x-4 items-center ">
                 <button onClick={onPlusClick}>
                     <CircleIcon icon={plus} gradient={true} />
