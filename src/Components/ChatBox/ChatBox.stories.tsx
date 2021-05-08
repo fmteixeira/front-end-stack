@@ -31,7 +31,7 @@ const propsDefault: Props = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas velit doloribus porro quae dolores consequatur in modi quidem. Natus vel ad dolores laborum fugiat asperiores modi, neque pariatur aperiam possimus. Delectus, excepturi? Natus, odio quidem, nam, dolore numquam laboriosam at voluptatibus eos earum blanditiis aliquam consequatur facere ut! Esse!",
     msgsNum: 3,
     active: false,
-    isUserOnline: true
+    isUserOnline: true,
 };
 
 // Component Story Node
@@ -42,7 +42,7 @@ Default.args = propsDefault;
 
 // Component Story Node
 export const Active = Template.bind({});
-Active.args = {...propsDefault, active:true};
+Active.args = { ...propsDefault, active: true };
 Active.parameters = {
     design: {
         type: "figma",
