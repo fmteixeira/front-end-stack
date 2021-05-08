@@ -10,13 +10,14 @@ import clsx from "clsx";
 export interface Props {
     userAvatar: string;
     userName: string;
+    isUserOnline:boolean
     msgText: string;
     lastMsgTime: number;
     msgsNum: number;
     active: boolean;
 }
 
-const ChatBox: FC<Props> = ({ userAvatar, userName, msgText, lastMsgTime, msgsNum, active }) => {
+const ChatBox: FC<Props> = ({ userAvatar, userName, msgText, lastMsgTime, msgsNum, active, isUserOnline}) => {
     return (
         <div
             className={clsx(
@@ -25,7 +26,8 @@ const ChatBox: FC<Props> = ({ userAvatar, userName, msgText, lastMsgTime, msgsNu
                 "grid grid-cols-[auto,1fr,auto] gap-4 p-7 rounded-md",
             )}
         >
-            <div>
+            <div className="h-[54px] w-[54px] relative" >
+                {isUserOnline && <span className="top-1 h-[10px] w-[10px] bg-green-500 absolute rounded-full shadow-onlineCircle"></span>}
                 <img src={userAvatar} alt="" className="rounded-full h-[54px] w-[54px]" />
             </div>
 
