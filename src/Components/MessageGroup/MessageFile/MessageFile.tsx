@@ -51,7 +51,7 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
             >
                 {text === undefined ? (
                     <button
-                        onClick={() => download(fileEncoded, fileType, fileSize)}
+                        onClick={() => download(fileEncoded, fileType, fileName)}
                         className={clsx(
                             "grid gap-x-3 items-center",
                             isActiveUser ? "grid-cols-[1fr,auto]" : "grid-cols-[auto,1fr]",
@@ -76,7 +76,7 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
                         <p className={clsx(isActiveUser && "text-right")}>{text}</p>
 
                         <button
-                            onClick={() => download(fileEncoded, fileType, fileSize)}
+                            onClick={() => download(fileEncoded, fileType, fileName)}
                             className={clsx(isActiveUser ? " grid grid-cols-[1fr,auto] " : "grid grid-cols-[auto,1fr]")}
                         >
                             <img
