@@ -3,6 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
 import MessageFile, { Props } from "./MessageFile";
+import { imageExample } from "../imageExample";
 
 export default {
     title: "MessageFile",
@@ -24,8 +25,10 @@ const Template: Story<Props> = (args) => <MessageFile {...args} />;
 const props: Props = {
     date: new Date(2012, 12, 18),
     isLast: true,
-    fileName: "texto1.txt",
+    fileName: "nameExample.png",
     fileSize: "125Kb",
+    fileType: "Png",
+    fileEncoded: imageExample,
     isActiveUser: false,
 };
 
@@ -33,11 +36,11 @@ const props: Props = {
 export const NoTextNoActiveUser = Template.bind({});
 NoTextNoActiveUser.args = props;
 
-export const TextNoActiveUser = Template.bind({});
-TextNoActiveUser.args = { ...props, text: "Aquie está o texto1," };
-
 export const NoTextActiveUser = Template.bind({});
 NoTextActiveUser.args = { ...props, isActiveUser: true };
 
+export const TextNoActiveUser = Template.bind({});
+TextNoActiveUser.args = { ...props, text: "Here's the image." };
+
 export const TextActiveUser = Template.bind({});
-TextActiveUser.args = { ...props, text: "Aqui está o texto1.", isActiveUser: true };
+TextActiveUser.args = { ...TextNoActiveUser.args, isActiveUser: true };
