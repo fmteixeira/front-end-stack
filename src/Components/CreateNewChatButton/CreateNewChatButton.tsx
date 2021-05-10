@@ -25,7 +25,7 @@ const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
                 "outline-none focus:outline-none",
                 "text-sm sm:text-base md:text-xl text-white-100",
                 "grid grid-cols-[auto,1fr] gap-2 place-items-center",
-                "group transition-all ease-in-out duration-500"
+                "group transition-all ease-in-out duration-500",
             )}
         >
             <div className="transform group-hover:rotate-180 transition-all ease-in-out duration-500">

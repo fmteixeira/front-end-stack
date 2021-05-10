@@ -7,11 +7,9 @@ import SearchBar from "../../SearchBar/SearchBar";
 // Pages
 // Resources
 
-interface Props {
-};
+interface Props {}
 
 const ChatColumnHeader: FC<Props> = ({}) => {
-
     return (
         <div className="p-3">
             <div className="grid grid-cols-2 py-5">
@@ -19,14 +17,13 @@ const ChatColumnHeader: FC<Props> = ({}) => {
                     <p>Recent Chats</p>
                 </div>
                 <div className="ml-auto">
-                    <CreateNewChatButton text="Create New Chat"/>
+                    <CreateNewChatButton text="Create New Chat" />
                 </div>
             </div>
             <div className="py-2 md:py-5">
-                <SearchBar/>
+                <SearchBar />
             </div>
         </div>
-        
     );
 };
 

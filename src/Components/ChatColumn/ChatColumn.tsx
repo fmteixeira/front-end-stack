@@ -2,22 +2,21 @@ import { FC } from "react";
 // Components
 import ChatColumnHeader from "./ChatColumnHeader/ChatColumnHeader";
 import ChatColumnMessages from "./ChatColumnMessages/ChatColumnMessages";
-import {Props as ChatBoxProps} from "../ChatBox/ChatBox"
+// Data
+import data from "../../resources/data/data.json";
 // Context
 // Hooks
 // Pages
 // Resources
 
-export interface Props {
-    chats: ChatBoxProps[]
-};
+export interface Props {}
 
-const ChatColumn: FC<Props> = ({chats}: Props) => {
-
+const ChatColumn: FC<Props> = ({}) => {
+    console.log(data);
     return (
         <div className="bg-white-300 h-full w-full grid grid-rows-[auto,1fr]">
-            <ChatColumnHeader/>
-            <ChatColumnMessages chats={chats}/>
+            <ChatColumnHeader />
+            <ChatColumnMessages chats={data} />
         </div>
     );
 };

@@ -1,31 +1,48 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 // Components
-import ChatBox, {Props as ChatBoxProps} from "../../ChatBox/ChatBox"
+import ChatBox from "../../ChatBox/ChatBox";
 // Context
 // Hooks
 // Pages
 // Resources
 
+interface MessagesProps {
+    from: {
+        username: string;
+        date: string;
+    };
+    msg: {
+        message: string;
+    };
+}
+interface ChatProps {
+    nome: string;
+    img: string;
+    online: boolean;
+    unreadMsg: number;
+    msgs: MessagesProps[];
+}
 interface Props {
-    chats: ChatBoxProps[]
-};
+    chats: ChatProps[];
+}
 
-
-
-const ChatColumnMessages: FC<Props> = ({chats}: Props) => {
+const ChatColumnMessages: FC<Props> = ({ chats }: Props) => {
+    const [currentChat, setCurrentChat] = useState<number>(1);
 
     return (
-        <div className="h-192 overflow-y-auto p-2">
+        <div className="h-157 overflow-y-auto p-2">
             <div className="grid gap-y-3">
-                {chats.map(function (chat) {
+                {chats.map(function (chat, index) {
                     return (
                         <ChatBox
-                            userAvatar={chat.userAvatar}
-                            userName={chat.userName}
-                            msgText={chat.msgText}
-                            lastMsgTime ={chat.lastMsgTime}
-                            msgsNum ={chat.msgsNum}
-                            active ={chat.active}
+                            setChat={() => setCurrentChat(index)}
+                            userAvatar={chat.img}
+                            userName={chat.nome}
+                            isUserOnline={chat.online}
+                            msgText={chat.msgs[chat.msgs.length - 1].msg.message}
+                            lastMsgTime={new Date(chat.msgs[chat.msgs.length - 1].from.date)}
+                            msgsNum={chat.unreadMsg}
+                            active={currentChat === index}
                         />
                     );
                 })}
