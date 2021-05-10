@@ -16,7 +16,7 @@ const SearchBar: FC<Props> = ({}) => {
                 <img src={search} alt=""></img>
             </div>
             <input
-                className="h-6 pr-10 text-xl text-gray font-medium placeholder-gray focus:outline-none "
+                className="h-6 w-full pr-10 text-xl text-gray font-medium placeholder-gray focus:outline-none "
                 placeholder="Search"
                 type="search"
                 name="search"

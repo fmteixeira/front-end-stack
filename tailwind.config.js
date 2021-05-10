@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   mode: "jit",
@@ -15,6 +17,7 @@ module.exports = {
       blue: "var(--color-blue)",
       pink: "var(--color-pink)",
       gray: "#707c97",
+      green: colors.green,
       white: {
         100: "#fff",
         200: "var(--color-white-200)",
@@ -35,10 +38,24 @@ module.exports = {
         "0.5": "0.12rem",
         "128": "32rem",
         "144": "36rem",
+        "160": "40rem",
+        "192": "48rem",
+        "212": "52rem",
+        "236": "56rem",
+        "256": "64rem"
       },
+
       borderRadius: {
         "4xl": "2rem",
       },
+
+      boxShadow: {
+
+        blueShadow: "1px 0px 10px rgba(42, 139, 242, 0.45), 0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75)",
+
+        buttonShadow: "0px 10px 15px rgba(0, 0, 0, 0.03), 0px 7px 25px rgba(42, 139, 242, 0.03), 0px 5px 25px rgba(42, 139, 242, 0.07)",
+
+      }
     },
   },
 
