@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
 import MessageGroup, { Props } from "./MessageGroup";
-
+import imageExample from "./imageExample"
 import userAvatar from "../../resources/media/icons/userAvatar.svg";
 
 export default {
@@ -39,7 +39,7 @@ const props: Props = {
             file: {
                 fileName: "imagem1.jpg",
                 fileSize: "2 Gb",
-                fileEncoded: "",
+                fileEncoded: imageExample,
                 fileType: "Png",
             },
         },
@@ -47,10 +47,10 @@ const props: Props = {
             id: 3,
             date: new Date(2000, 4, 20, 12, 30),
             file: {
-                fileName: "texto125.pdf",
-                fileSize: "178 Kb",
-                fileEncoded: "",
-                fileType: "Pdf",
+                fileName: "imagem1.jpg",
+                fileSize: "2 Gb",
+                fileEncoded: imageExample,
+                fileType: "Png",
             },
         },
         {
