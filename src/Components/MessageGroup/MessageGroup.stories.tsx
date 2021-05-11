@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
 import MessageGroup, { Props } from "./MessageGroup";
-import imageExample from "./imageExample"
+import {imageExample} from "./imageExample"
 import userAvatar from "../../resources/media/icons/userAvatar.svg";
 
 export default {
