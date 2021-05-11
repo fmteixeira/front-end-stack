@@ -11,6 +11,12 @@ export default {
     component: MessageGroup,
     decorators: [withDesign],
     argTypes: {},
+    parameters: {
+        design: {
+            type: "figma",
+            url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=0%3A1",
+        },
+    },
 } as Meta;
 
 // Component Story
@@ -28,8 +34,29 @@ const props: Props = {
         },
         {
             id: 2,
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, debitis.",
+            date: new Date(2000, 4, 20, 11, 30),
+            file: {
+                fileName: "imagem1.jpg",
+                fileSize: "2 Gb",
+                fileEncoded: "",
+                fileType: "Png",
+            },
+        },
+        {
+            id: 3,
+            date: new Date(2000, 4, 20, 12, 30),
+            file: {
+                fileName: "texto125.pdf",
+                fileSize: "178 Kb",
+                fileEncoded: "",
+                fileType: "Pdf",
+            },
+        },
+        {
+            id: 4,
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
-            date: new Date(2021, 4, 4, 13, 30),
+            date: new Date(2021, 4, 5, 13, 30),
         },
     ],
 };
@@ -37,9 +64,3 @@ const props: Props = {
 // Component Story Node
 export const Default = Template.bind({});
 Default.args = props;
-Default.parameters = {
-    design: {
-        type: "figma",
-        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=0%3A1",
-    },
-};
