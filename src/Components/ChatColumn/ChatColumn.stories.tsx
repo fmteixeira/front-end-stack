@@ -14,11 +14,15 @@ export default {
 } as Meta;
 
 // Component Story
-const Template: Story<Props> = (args) => <ChatColumn {...args} />;
+const Template: Story<Props> = (args) => (
+    <div className="h-236">
+        <ChatColumn {...args} />
+    </div>
+);
 
 // Component Props
 const props: Props = {
-    chats: data
+    chats: data,
 };
 
 // Component Story Node

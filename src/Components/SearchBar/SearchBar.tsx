@@ -8,11 +8,10 @@ import search from "../../resources/media/icons/search.svg";
 // Resources
 
 export interface Props {
-    setSearch: Function
+    setSearch: Function;
 }
 
-const SearchBar: FC<Props> = ({setSearch}: Props) => {
-
+const SearchBar: FC<Props> = ({ setSearch }: Props) => {
     const searchEvent = (searchValue: string) => {
         setSearch(searchValue);
     };
@@ -27,7 +26,7 @@ const SearchBar: FC<Props> = ({setSearch}: Props) => {
                 placeholder="Search"
                 type="search"
                 name="search"
-                onChange={event => searchEvent(event.target.value)}
+                onChange={(event) => searchEvent(event.target.value)}
             />
         </div>
     );

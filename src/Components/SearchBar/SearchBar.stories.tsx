@@ -14,8 +14,14 @@ export default {
 // Component Story
 const Template: Story<Props> = (args) => <SearchBar {...args} />;
 
+function setSearch(): Function {
+    return Function;
+}
+
 // Component Props
-const props: Props = {};
+const props: Props = {
+    setSearch: setSearch,
+};
 
 // Component Story Node
 export const Default = Template.bind({});

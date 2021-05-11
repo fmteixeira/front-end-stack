@@ -28,14 +28,13 @@ export interface Props {
     chats: ChatProps[];
 }
 
-const ChatColumn: FC<Props> = ({chats}: Props) => {
-
+const ChatColumn: FC<Props> = ({ chats }: Props) => {
     const [searchInput, setSearchInput] = useState<string>("");
 
     return (
         <div className="bg-white-300 h-full w-full grid grid-rows-[auto,1fr]">
-            <ChatColumnHeader setSearch={(inputValue: string) => setSearchInput(inputValue)}/>
-            <ChatColumnMessages chats={chats} inputValue={searchInput}/>
+            <ChatColumnHeader setSearch={(inputValue: string) => setSearchInput(inputValue)} />
+            <ChatColumnMessages chats={chats} inputValue={searchInput} />
         </div>
     );
 };

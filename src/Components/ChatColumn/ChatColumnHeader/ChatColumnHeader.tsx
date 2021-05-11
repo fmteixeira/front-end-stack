@@ -8,13 +8,12 @@ import SearchBar from "../../SearchBar/SearchBar";
 // Resources
 
 interface Props {
-    setSearch: Function
+    setSearch: Function;
 }
 
-const ChatColumnHeader: FC<Props> = ({setSearch}: Props) => {
-
+const ChatColumnHeader: FC<Props> = ({ setSearch }: Props) => {
     const searchEvent = (searchValue: string) => {
-        setSearch(searchValue)
+        setSearch(searchValue);
     };
 
     return (
