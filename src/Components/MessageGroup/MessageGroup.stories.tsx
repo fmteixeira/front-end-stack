@@ -59,8 +59,12 @@ const props: Props = {
             date: new Date(2021, 4, 5, 13, 30),
         },
     ],
+    isActiveUser: false,
 };
 
 // Component Story Node
 export const Default = Template.bind({});
 Default.args = props;
+
+export const ActiveUser = Template.bind({});
+ActiveUser.args = { ...props, isActiveUser: true };
