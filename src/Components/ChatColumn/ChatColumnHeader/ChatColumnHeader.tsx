@@ -7,9 +7,16 @@ import SearchBar from "../../SearchBar/SearchBar";
 // Pages
 // Resources
 
-interface Props {}
+interface Props {
+    setSearch: Function
+}
 
-const ChatColumnHeader: FC<Props> = ({}) => {
+const ChatColumnHeader: FC<Props> = ({setSearch}: Props) => {
+
+    const searchEvent = (searchValue: string) => {
+        setSearch(searchValue)
+    };
+
     return (
         <div className="p-3">
             <div className="grid grid-cols-2 py-5">
@@ -21,7 +28,7 @@ const ChatColumnHeader: FC<Props> = ({}) => {
                 </div>
             </div>
             <div className="py-2 md:py-5">
-                <SearchBar />
+                <SearchBar setSearch={(searchValue: string) => searchEvent(searchValue)} />
             </div>
         </div>
     );

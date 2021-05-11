@@ -3,6 +3,8 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
 import ChatColumn, { Props } from "./ChatColumn";
+// Data
+import data from "../../resources/data/data.json";
 
 export default {
     title: "ChatColumn",
@@ -15,7 +17,9 @@ export default {
 const Template: Story<Props> = (args) => <ChatColumn {...args} />;
 
 // Component Props
-const props: Props = {};
+const props: Props = {
+    chats: data
+};
 
 // Component Story Node
 export const Default = Template.bind({});

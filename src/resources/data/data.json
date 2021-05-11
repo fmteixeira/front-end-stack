@@ -1,5 +1,6 @@
 [
       { 
+          "id": 0,
           "nome": "Luy Robin",
           "img": "https://picsum.photos/seed/picsum/300/300",
           "online": true,
@@ -64,6 +65,7 @@
         ]
       },
      { 
+          "id": 1,
           "nome": "Jared Sunn",
           "img": "https://picsum.photos/id/935/300/300",
           "online": true,
@@ -118,6 +120,7 @@
         ]
       },
     {
+          "id": 2,
           "nome": "Nika Jerrardo",
           "img": "https://picsum.photos/id/995/300/300",
           "online": false,
@@ -199,6 +202,7 @@
         ]
       },
       { 
+          "id": 3,
           "nome": "David Amrosa",
           "img": "https://picsum.photos/id/535/300/300",
           "online": false,
@@ -206,7 +210,7 @@
           "msgs": [{  
             "from":{  
                 "username":"David Amrosa",
-                "date": "2021-05-08T08:30:00"
+                "date": "2021-05-06T08:30:00"
             },
             "msg":{  
                 "message": "Hello!"
@@ -215,7 +219,7 @@
           {  
             "from":{  
                 "username":"John Doe",
-                "date": "2021-05-08T08:31:00"
+                "date": "2021-05-06T08:31:00"
             },
             "msg":{  
                 "message":"Hi!!!"
@@ -225,7 +229,7 @@
           {  
             "from":{  
                 "username":"David Amrosa",
-                "date": "2021-05-08T08:35:00"
+                "date": "2021-05-06T08:35:00"
             },
             "msg":{  
                 "message": "Have you been hanging out lately?"
@@ -234,7 +238,7 @@
           {  
             "from":{  
                 "username":"John Doe",
-                "date": "2021-05-08T09:30:00"
+                "date": "2021-05-07T09:30:00"
             },
             "msg":{  
                 "message":"What do you mean?"
@@ -244,7 +248,7 @@
           {  
             "from":{  
                 "username":"David Amrosa",
-                "date": "2021-05-008T09:35:00"
+                "date": "2021-05-007T09:35:00"
             },
             "msg":{  
                 "message": "Like, have you been hanging out?"
@@ -273,6 +277,7 @@
         ]
       },
       {
+        "id": 4,
         "nome": "Jeff Dunham",
         "img": "https://picsum.photos/id/435/300/300",
         "online": true,
@@ -280,7 +285,7 @@
         "msgs": [{  
           "from":{  
               "username":"Jeff Dunham",
-              "date": "2021-05-07T12:30:00"
+              "date": "2021-05-06T12:30:00"
           },
           "msg":{  
               "message": "Hey! I'm trying calling you!!"
@@ -289,7 +294,7 @@
         {  
           "from":{  
               "username":"Jeff Dunham",
-              "date": "2021-05-07T13:30:00"
+              "date": "2021-05-06T13:30:00"
           },
           "msg":{  
               "message": "Pick up your phone!!"
@@ -298,7 +303,7 @@
         {  
           "from":{  
               "username":"John Doe",
-              "date": "2021-05-07T15:30:00"
+              "date": "2021-05-06T15:30:00"
           },
           "msg":{  
               "message":"Sorry, I was ocupied... :3"
@@ -308,7 +313,7 @@
         {  
           "from":{  
               "username":"Jeff Dunham",
-              "date": "2021-05-07T15:35:00"
+              "date": "2021-05-06T15:35:00"
           },
           "msg":{  
               "message": "Doing what?!."
@@ -351,6 +356,71 @@
               "message": "Just to remind you that now classes are online."
               }
         }
+      ]
+    },
+    { 
+        "id": 5,
+        "nome": "Laura Moreau",
+        "img": "https://picsum.photos/id/500/300/300",
+        "online": true,
+        "unreadMsg": 1,
+        "msgs": [{  
+           "from":{  
+              "username":"Laura Moreau",
+              "date": "2021-05-05T22:30:00"
+           },
+           "msg":{  
+              "message": "Good Afternoon"
+              }
+        },
+        {  
+           "from":{  
+              "username":"Laura Moreau",
+              "date": "2021-05-05T22:33:00"
+           },
+           "msg":{  
+              "message": "Wanna go swimming"
+              }
+        },
+        {  
+           "from":{  
+               "username":"John Doe",
+               "date": "2021-05-05T22:36:00"
+           },
+           "msg":{  
+              "message":"Hell yeah!"
+
+           }
+        },
+        {  
+           "from":{  
+              "username":"Laura Moreau",
+              "date": "2021-05-05T22:38:00"
+           },
+           "msg":{  
+              "message": "Great. See you at the beach."
+              }
+        },
+        {  
+           "from":{  
+               "username":"John Doe",
+               "date": "2021-05-05T22:39:00"
+           },
+           "msg":{  
+              "message":"Dont forget your sunscreen! xD"
+
+           }
+        },
+        {  
+          "from":{  
+              "username":"Laura Moreau",
+              "date": "2021-05-05T22:45:00"
+          },
+          "msg":{  
+             "message":"Yeah fine... xD"
+
+          }
+       }
       ]
     }
   
