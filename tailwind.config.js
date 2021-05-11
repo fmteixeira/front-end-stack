@@ -17,10 +17,10 @@ module.exports = {
       blue: "var(--color-blue)",
       blueExt: colors.blue,
       pink: "var(--color-pink)",
+      gray: "#707c97",
       green: colors.green,
-      gray: "var(--color-gray)",
       white: {
-        100: "var(--color-white-100)",
+        100: "#fff",
         200: "var(--color-white-200)",
         300: "var(--color-white-300)",
       },
@@ -55,6 +55,8 @@ module.exports = {
         blueShadow: "1px 0px 10px rgba(42, 139, 242, 0.45), 0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75)",
         buttonShadow: "0px 10px 15px rgba(0, 0, 0, 0.03), 0px 7px 25px rgba(42, 139, 242, 0.03), 0px 5px 25px rgba(42, 139, 242, 0.07)",
         createChatButton: "6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15)",
+        onlineCircle: " 0 0 0 2px #fff"
+
         onlineCircle: " 0 0 0 2px #fff"
 
       }

@@ -6440,6 +6440,11 @@ emittery@^0.7.1:
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"
   integrity sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ==
 
+emoji-picker-react@^3.4.4:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/emoji-picker-react/-/emoji-picker-react-3.4.4.tgz#027786af60d4b7ebe04338c5456ae7ae4b3d3eb6"
+  integrity sha512-j5atTz5Uawt926Bc37MG5S0MwfIa9Gh4CVDGhnMSBhKZkDmgd5Q0QtQgcv+baLGdByYBsYx1OyQHORc6o8Ce5Q==
+
 "emoji-regex@>=6.0.0 <=6.1.1":
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.1.1.tgz#c6cd0ec1b0642e2a3c67a1137efc5e796da4f88e"
@@ -16767,6 +16772,11 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zustand@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.5.0.tgz#727ce5bc28732ebce4f2ecb83b4325c866950b48"
+  integrity sha512-fwZfax2c954pWB+RYXHXG0HWyuoUj8YiNykRjZC/w6L7ay9fPQ7M90mgDVP1KJsRqxLsDILBWSNxuzw5BkCpxA==
 
 zwitch@^1.0.0:
   version "1.0.5"

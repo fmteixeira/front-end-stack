@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
 import MessageGroup, { Props } from "./MessageGroup";
-
+import { imageExample } from "./imageExample";
 import userAvatar from "../../resources/media/icons/userAvatar.svg";
 
 export default {
@@ -11,6 +11,12 @@ export default {
     component: MessageGroup,
     decorators: [withDesign],
     argTypes: {},
+    parameters: {
+        design: {
+            type: "figma",
+            url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=0%3A1",
+        },
+    },
 } as Meta;
 
 // Component Story
@@ -28,18 +34,37 @@ const props: Props = {
         },
         {
             id: 2,
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, debitis.",
+            date: new Date(2000, 4, 20, 11, 30),
+            file: {
+                fileName: "imagem1.jpg",
+                fileSize: "2 Gb",
+                fileEncoded: imageExample,
+                fileType: "Png",
+            },
+        },
+        {
+            id: 3,
+            date: new Date(2000, 4, 20, 12, 30),
+            file: {
+                fileName: "imagem1.jpg",
+                fileSize: "2 Gb",
+                fileEncoded: imageExample,
+                fileType: "Png",
+            },
+        },
+        {
+            id: 4,
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
-            date: new Date(2021, 4, 4, 13, 30),
+            date: new Date(2021, 4, 5, 13, 30),
         },
     ],
+    isActiveUser: false,
 };
 
 // Component Story Node
 export const Default = Template.bind({});
 Default.args = props;
-Default.parameters = {
-    design: {
-        type: "figma",
-        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=0%3A1",
-    },
-};
+
+export const ActiveUser = Template.bind({});
+ActiveUser.args = { ...props, isActiveUser: true };
