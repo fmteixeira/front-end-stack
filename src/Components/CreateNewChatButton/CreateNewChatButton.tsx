@@ -25,11 +25,15 @@ const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
                 "text-sm sm:text-base md:text-xl text-white-100",
                 "grid grid-cols-[auto,1fr] gap-2 place-items-center",
                 "group",
-                "hover:shadow-createChatButton transition-all ease-in-out duration-200"
+                "hover:shadow-createChatButton transition-all ease-in-out duration-200",
             )}
         >
             <div>
-                <img src={plus} alt="" className="h-6 w-6 transform group-hover:rotate-180 transition-all ease-in-out duration-200" />
+                <img
+                    src={plus}
+                    alt=""
+                    className="h-6 w-6 transform group-hover:rotate-180 transition-all ease-in-out duration-200"
+                />
             </div>
             <div>{text}</div>
         </button>
