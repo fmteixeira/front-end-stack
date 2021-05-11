@@ -2,25 +2,27 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
-import SearchBar, { Props } from "./SearchBar";
+import ChatColumn, { Props } from "./ChatColumn";
+// Data
+import data from "../../resources/data/data.json";
 
 export default {
-    title: "SearchBar",
-    component: SearchBar,
+    title: "ChatColumn",
+    component: ChatColumn,
     decorators: [withDesign],
     argTypes: {},
 } as Meta;
 
 // Component Story
-const Template: Story<Props> = (args) => <SearchBar {...args} />;
-
-function setSearch(): Function {
-    return Function;
-}
+const Template: Story<Props> = (args) => (
+    <div className="h-256">
+        <ChatColumn {...args} />
+    </div>
+);
 
 // Component Props
 const props: Props = {
-    setSearch: setSearch,
+    chats: data,
 };
 
 // Component Story Node
@@ -29,6 +31,6 @@ Default.args = props;
 Default.parameters = {
     design: {
         type: "figma",
-        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=41%3A878", // Figma Url
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-1?node-id=786%3A192", // Figma Url
     },
 };

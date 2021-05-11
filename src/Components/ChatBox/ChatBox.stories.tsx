@@ -22,11 +22,17 @@ export default {
 // Component Story
 const Template: Story<Props> = (args) => <ChatBox {...args} />;
 
+function setChat(): Function {
+    return Function;
+}
+
 // Component Props
 const propsDefault: Props = {
+    setChat: setChat(),
     userAvatar: userAvatar,
     userName: "Luy Robin",
-    lastMsgTime: 2,
+    isUserOnline: true,
+    lastMsgTime: new Date(2021, 4, 6, 22),
     msgText:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas velit doloribus porro quae dolores consequatur in modi quidem. Natus vel ad dolores laborum fugiat asperiores modi, neque pariatur aperiam possimus. Delectus, excepturi? Natus, odio quidem, nam, dolore numquam laboriosam at voluptatibus eos earum blanditiis aliquam consequatur facere ut! Esse!",
     msgsNum: 3,
@@ -39,9 +45,11 @@ Default.args = propsDefault;
 
 //Component Props
 const propsActive: Props = {
+    setChat: setChat(),
     userAvatar: userAvatar,
     userName: "Luy Robin",
-    lastMsgTime: 2,
+    isUserOnline: false,
+    lastMsgTime: new Date(2021, 4, 6, 12),
     msgText:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas velit doloribus porro quae dolores consequatur in modi quidem. Natus vel ad dolores laborum fugiat asperiores modi, neque pariatur aperiam possimus. Delectus, excepturi? Natus, odio quidem, nam, dolore numquam laboriosam at voluptatibus eos earum blanditiis aliquam consequatur facere ut! Esse!",
     msgsNum: 3,
