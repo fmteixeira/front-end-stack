@@ -19,7 +19,6 @@ export interface Props {
     active: boolean;
 }
 
-
 const ChatBox: FC<Props> = ({ setChat, userAvatar, userName, isUserOnline, msgText, lastMsgTime, msgsNum, active }) => {
     const dateAgo = (): string => {
         return moment(lastMsgTime).fromNow();
@@ -28,9 +27,6 @@ const ChatBox: FC<Props> = ({ setChat, userAvatar, userName, isUserOnline, msgTe
     const clickEvent = () => {
         setChat();
     };
-
-
-const ChatBox: FC<Props> = ({ userAvatar, userName, msgText, lastMsgTime, msgsNum, active, isUserOnline }) => {
 
     return (
         <button
@@ -45,12 +41,10 @@ const ChatBox: FC<Props> = ({ userAvatar, userName, msgText, lastMsgTime, msgsNu
             )}
         >
             <div className="h-[54px] w-[54px] relative">
-
                 <img src={userAvatar} alt="" className="rounded-full absolute h-[54px] w-[54px]" />
                 {isUserOnline && (
                     <span className="right-9 h-[10px] w-[10px] bg-green-500 absolute rounded-full shadow-onlineCircle"></span>
                 )}
-
             </div>
 
             <span className="font-bold text-xs sm:text-sm md:text-base text-black mr-auto">{userName}</span>
