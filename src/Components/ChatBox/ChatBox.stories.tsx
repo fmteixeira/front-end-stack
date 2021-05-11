@@ -37,6 +37,7 @@ const propsDefault: Props = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas velit doloribus porro quae dolores consequatur in modi quidem. Natus vel ad dolores laborum fugiat asperiores modi, neque pariatur aperiam possimus. Delectus, excepturi? Natus, odio quidem, nam, dolore numquam laboriosam at voluptatibus eos earum blanditiis aliquam consequatur facere ut! Esse!",
     msgsNum: 3,
     active: false,
+    isUserOnline: true,
 };
 
 // Component Story Node
@@ -44,6 +45,7 @@ export const Default = Template.bind({});
 Default.args = propsDefault;
 
 //Component Props
+
 const propsActive: Props = {
     setChat: setChat(),
     userAvatar: userAvatar,
@@ -56,9 +58,10 @@ const propsActive: Props = {
     active: true,
 };
 
+
 // Component Story Node
 export const Active = Template.bind({});
-Active.args = propsActive;
+Active.args = { ...propsDefault, active: true };
 Active.parameters = {
     design: {
         type: "figma",
