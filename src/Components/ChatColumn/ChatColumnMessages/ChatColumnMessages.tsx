@@ -30,7 +30,7 @@ const ChatColumnMessages: FC<Props> = ({ chats }: Props) => {
     const [currentChat, setCurrentChat] = useState<number>(1);
 
     return (
-        <div className="h-157 overflow-y-auto p-2">
+        <div className="h-192 overflow-y-auto p-2">
             <div className="grid gap-y-3">
                 {chats.map(function (chat, index) {
                     return (
