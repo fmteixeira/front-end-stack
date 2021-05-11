@@ -35,7 +35,7 @@
       
       
     ::-webkit-scrollbar-thumb {
-        background-color: grey;    /* color of the scroll thumb */
+        background-color: #929292;    /* color of the scroll thumb */
         border-radius: 50px; /* creates padding around scroll thumb */
       }
 }
