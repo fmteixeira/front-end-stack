@@ -25,6 +25,7 @@ const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
                 "text-sm sm:text-base md:text-xl text-white-100",
                 "grid grid-cols-[auto,1fr] gap-2 place-items-center",
                 "group",
+                "outline-none focus:outline-none",
                 "hover:shadow-createChatButton transition-all ease-in-out duration-200",
             )}
         >

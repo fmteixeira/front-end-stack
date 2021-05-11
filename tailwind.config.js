@@ -15,6 +15,7 @@ module.exports = {
       black: "var(--color-black)",
       dark: "var(--color-dark)",
       blue: "var(--color-blue)",
+      blueExt: colors.blue,
       pink: "var(--color-pink)",
       gray: "#707c97",
       green: colors.green,
