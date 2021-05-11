@@ -55,6 +55,8 @@ module.exports = {
 
         buttonShadow: "0px 10px 15px rgba(0, 0, 0, 0.03), 0px 7px 25px rgba(42, 139, 242, 0.03), 0px 5px 25px rgba(42, 139, 242, 0.07)",
 
+        onlineCircle: " 0 0 0 2px #fff"
+
       }
     },
   },
