@@ -24,7 +24,7 @@ const Template: Story<Props> = (args) => <ChatBox {...args} />;
 
 function setChat(): Function {
     return Function;
-  }
+}
 
 // Component Props
 const propsDefault: Props = {
