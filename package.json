@@ -27,7 +27,8 @@
     "sb": "^6.2.8",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "zustand": "^3.5.0"
   },
   "scripts": {
     "start": "craco start",
