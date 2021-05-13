@@ -33,6 +33,6 @@ export interface Chat {
     readonly name: string;
     readonly img: string;
     readonly online: boolean;
-    readonly unreadMessage: number;
+    readonly unreadMessageCounter: number;
     readonly messages: Messages[];
 }

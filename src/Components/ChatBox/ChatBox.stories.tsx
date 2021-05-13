@@ -34,7 +34,7 @@ const propsDefault: Props = {
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
         online: false,
-        unreadMessage: 1,
+        unreadMessageCounter: 1,
         messages: [{  
             username:"Laura Moreau",
             date: "2021-05-05T22:30:00",
@@ -84,7 +84,7 @@ const propsActive: Props = {
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
         online: true,
-        unreadMessage: 1,
+        unreadMessageCounter: 1,
         messages: [{  
             username:"Laura Moreau",
             date: "2021-05-05T22:30:00",
@@ -138,7 +138,7 @@ const propsNoMessage: Props = {
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
         online: true,
-        unreadMessage: 1,
+        unreadMessageCounter: 1,
         messages: []
     },
     active: true,

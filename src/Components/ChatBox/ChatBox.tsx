@@ -61,11 +61,11 @@ const ChatBox: FC<Props> = ({ setChat, chat, active }) => {
                     </p>
                 )}
 
-                {chat.unreadMessage > 0 && !active && (
+                {chat.unreadMessageCounter > 0 && !active && (
                     <div className="relative px-3">
                         <div className="bg-pink absolute rounded-full h-[20px] w-[20px] grid place-items-center animate-ping" />
                         <div className="bg-pink absolute rounded-full h-[20px] w-[20px] grid place-items-center">
-                            <span className="text-white-100 text-[13px]">{chat.unreadMessage}</span>
+                            <span className="text-white-100 text-[13px]">{chat.unreadMessageCounter}</span>
                         </div>
                     </div>
                 )}

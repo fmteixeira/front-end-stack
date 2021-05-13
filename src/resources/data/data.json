@@ -4,7 +4,7 @@
         "name": "Luy Robin",
         "img": "https://picsum.photos/seed/picsum/300/300",
         "online": true,
-        "unreadMessage": 1,
+        "unreadMessageCounter": 1,
         "messages": [{   
             "username":"Luy Robin",
             "date": "2021-05-09T22:30:00",
@@ -42,7 +42,7 @@
         "name": "Jared Sunn",
         "img": "https://picsum.photos/id/935/300/300",
         "online": true,
-        "unreadMessage": 0,
+        "unreadMessageCounter": 0,
         "messages": [{  
             "username":"Jared Sunn",
             "date": "2021-05-08T22:30:00",
@@ -75,7 +75,7 @@
         "name": "Nika Jerrardo",
         "img": "https://picsum.photos/id/995/300/300",
         "online": false,
-        "unreadMessage": 2, 
+        "unreadMessageCounter": 2, 
         "messages": [{  
             "username":"Nika Jerrardo",
             "date": "2021-05-08T12:30:00",
@@ -124,7 +124,7 @@
         "name": "David Amrosa",
         "img": "https://picsum.photos/id/535/300/300",
         "online": false,
-        "unreadMessage": 0, 
+        "unreadMessageCounter": 0, 
         "messages": [{  
             "username":"David Amrosa",
             "date": "2021-05-06T08:30:00",
@@ -167,7 +167,7 @@
         "name": "Jeff Dunham",
         "img": "https://picsum.photos/id/435/300/300",
         "online": true,
-        "unreadMessage": 3, 
+        "unreadMessageCounter": 3, 
         "messages": [{
             "username":"Jeff Dunham",
             "date": "2021-05-06T12:30:00",
@@ -215,7 +215,7 @@
         "name": "Laura Moreau",
         "img": "https://picsum.photos/id/500/300/300",
         "online": false,
-        "unreadMessage": 1,
+        "unreadMessageCounter": 1,
         "messages": [{  
             "username":"Laura Moreau",
             "date": "2021-05-05T22:30:00",
@@ -254,7 +254,7 @@
         "name": "Michael Scoofield",
         "img": "https://picsum.photos/id/500/300/300",
         "online": true,
-        "unreadMessage": 0,
+        "unreadMessageCounter": 0,
         "messages": []
     }
 ]
