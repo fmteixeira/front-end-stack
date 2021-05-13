@@ -22,51 +22,51 @@ export default {
 // Component Story
 const Template: Story<Props> = (args) => <ChatBox {...args} />;
 
-function setChat():() => void {
+function setChat(): () => void {
     return Function;
 }
 
 // Component Props
 const propsDefault: Props = {
     setChat: setChat(),
-    chat: { 
+    chat: {
         id: 5,
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
         online: false,
         unreadMessageCounter: 1,
-        messages: [{  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:30:00",
-            message: "Good Afternoon"
-            
-        },
-        {  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:33:00",
-            message: "Wanna go swimming"
-        },
-        {   
-            username:"John Doe",
-            date: "2021-05-05T22:36:00",
-            message:"Hell yeah!"
-        },
-        {  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:38:00",
-            message: "Great. See you at the beach."
-        },
-        {  
-            username:"John Doe",
-            date: "2021-05-05T22:39:00",
-            message:"Dont forget your sunscreen! xD"
-        },
-        {  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:45:00",
-            message:"Yeah fine... xD"
-        }
-      ]
+        messages: [
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:30:00",
+                message: "Good Afternoon",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:33:00",
+                message: "Wanna go swimming",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:36:00",
+                message: "Hell yeah!",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:38:00",
+                message: "Great. See you at the beach.",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:39:00",
+                message: "Dont forget your sunscreen! xD",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:45:00",
+                message: "Yeah fine... xD",
+            },
+        ],
     },
     active: false,
 };
@@ -79,44 +79,44 @@ Default.args = propsDefault;
 
 const propsActive: Props = {
     setChat: setChat(),
-    chat: { 
+    chat: {
         id: 5,
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
         online: true,
         unreadMessageCounter: 1,
-        messages: [{  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:30:00",
-            message: "Good Afternoon"
-            
-        },
-        {  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:33:00",
-            message: "Wanna go swimming"
-        },
-        {   
-            username:"John Doe",
-            date: "2021-05-05T22:36:00",
-            message:"Hell yeah!"
-        },
-        {  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:38:00",
-            message: "Great. See you at the beach."
-        },
-        {  
-            username:"John Doe",
-            date: "2021-05-05T22:39:00",
-            message:"Dont forget your sunscreen! xD"
-        },
-        {  
-            username:"Laura Moreau",
-            date: "2021-05-05T22:45:00",
-            message:"Yeah fine... xD"
-        }
-      ]
+        messages: [
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:30:00",
+                message: "Good Afternoon",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:33:00",
+                message: "Wanna go swimming",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:36:00",
+                message: "Hell yeah!",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:38:00",
+                message: "Great. See you at the beach.",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:39:00",
+                message: "Dont forget your sunscreen! xD",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:45:00",
+                message: "Yeah fine... xD",
+            },
+        ],
     },
     active: true,
 };
@@ -133,13 +133,13 @@ Active.parameters = {
 
 const propsNoMessage: Props = {
     setChat: setChat(),
-    chat: { 
+    chat: {
         id: 5,
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
         online: true,
         unreadMessageCounter: 1,
-        messages: []
+        messages: [],
     },
     active: true,
 };
