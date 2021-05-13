@@ -6,26 +6,9 @@ import ChatColumnMessages from "./ChatColumnMessages/ChatColumnMessages";
 // Hooks
 // Pages
 // Resources
-
-interface MessagesProps {
-    from: {
-        username: string;
-        date: string;
-    };
-    msg: {
-        message: string;
-    };
-}
-interface ChatProps {
-    id: number;
-    nome: string;
-    img: string;
-    online: boolean;
-    unreadMsg: number;
-    msgs: MessagesProps[];
-}
+import { Chat } from "../../resources/typing/interfaces";
 export interface Props {
-    chats: ChatProps[];
+    chats: Chat[];
 }
 
 const ChatColumn: FC<Props> = ({ chats }: Props) => {
@@ -33,7 +16,7 @@ const ChatColumn: FC<Props> = ({ chats }: Props) => {
 
     return (
         <div className="bg-white-300 h-full w-full grid grid-rows-[auto,1fr]">
-            <ChatColumnHeader setSearch={(inputValue: string) => setSearchInput(inputValue)} />
+            <ChatColumnHeader setSearch={setSearchInput} />
             <ChatColumnMessages chats={chats} inputValue={searchInput} />
         </div>
     );

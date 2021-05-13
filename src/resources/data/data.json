@@ -362,7 +362,7 @@
         "id": 5,
         "nome": "Laura Moreau",
         "img": "https://picsum.photos/id/500/300/300",
-        "online": true,
+        "online": false,
         "unreadMsg": 1,
         "msgs": [{  
            "from":{  
@@ -422,6 +422,13 @@
           }
        }
       ]
+    },
+    { 
+        "id": 6,
+        "nome": "Michael Scoofield",
+        "img": "https://picsum.photos/id/500/300/300",
+        "online": true,
+        "unreadMsg": 0,
+        "msgs": []
     }
-  
 ]

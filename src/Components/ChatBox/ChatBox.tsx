@@ -13,17 +13,14 @@ export interface Props {
     userAvatar: string;
     userName: string;
     isUserOnline: boolean;
-    msgText: string;
-    lastMsgTime: Date;
+    msgText: string | undefined;
+    lastMsgTime: string | undefined;
     msgsNum: number;
     active: boolean;
 }
 
 const ChatBox: FC<Props> = ({ setChat, userAvatar, userName, isUserOnline, msgText, lastMsgTime, msgsNum, active }) => {
-    const dateAgo = (): string => {
-        return moment(lastMsgTime).fromNow();
-    };
-
+    
     const clickEvent = () => {
         setChat();
     };
@@ -49,25 +46,25 @@ const ChatBox: FC<Props> = ({ setChat, userAvatar, userName, isUserOnline, msgTe
 
             <span className="font-bold text-xs sm:text-sm md:text-base text-black mr-auto">{userName}</span>
 
-            <span
+            {lastMsgTime && <span
                 className={clsx(
                     active ? "text-white-100 opacity-75" : "text-gray",
                     "justify-self-end",
                     "text-xs sm:text-sm md:text-base",
                 )}
             >
-                {dateAgo()}
-            </span>
+                {moment(lastMsgTime).fromNow()}
+            </span>}
 
             <div className="col-span-full grid grid-cols-[1fr,auto] gap-x-5">
-                <p
+                {msgText && <p
                     className={clsx(
                         active ? "text-white-100" : "text-gray",
                         "text-justify text-sm sm:text-base line-clamp-3",
                     )}
                 >
                     {msgText}
-                </p>
+                </p>}
 
                 {msgsNum > 0 && !active && (
                     <div className="relative px-3">

@@ -5,26 +5,9 @@ import ChatBox from "../../ChatBox/ChatBox";
 // Hooks
 // Pages
 // Resources
-
-interface MessagesProps {
-    from: {
-        username: string;
-        date: string;
-    };
-    msg: {
-        message: string;
-    };
-}
-interface ChatProps {
-    id: number;
-    nome: string;
-    img: string;
-    online: boolean;
-    unreadMsg: number;
-    msgs: MessagesProps[];
-}
+import { Chat } from "../../../resources/typing/interfaces";
 interface Props {
-    chats: ChatProps[];
+    chats: Chat[];
     inputValue: string;
 }
 
@@ -49,10 +32,10 @@ const ChatColumnMessages: FC<Props> = ({ chats, inputValue }: Props) => {
                                 userAvatar={chat.img}
                                 userName={chat.nome}
                                 isUserOnline={chat.online}
-                                msgText={chat.msgs[chat.msgs.length - 1].msg.message}
-                                lastMsgTime={new Date(chat.msgs[chat.msgs.length - 1].from.date)}
+                                msgText={chat.msgs[chat.msgs.length - 1] && chat.msgs[chat.msgs.length - 1].msg.message}
+                                lastMsgTime={chat.msgs[chat.msgs.length - 1] && chat.msgs[chat.msgs.length - 1].from.date}
                                 msgsNum={chat.unreadMsg}
-                                active={currentChat === index}
+                                active={currentChat === chat.id}
                             />
                         )
                     );
