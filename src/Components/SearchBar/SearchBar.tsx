@@ -8,7 +8,7 @@ import search from "../../resources/media/icons/search.svg";
 // Resources
 
 export interface Props {
-    setSearch: Function;
+    setSearch: (searchVaue: string) => void;
 }
 
 const SearchBar: FC<Props> = ({ setSearch }: Props) => {
