@@ -24,20 +24,15 @@ export interface SentFile {
 }
 
 export interface Messages {
-    readonly from: {
-        readonly username: string | undefined;
-        readonly date: string | undefined;
-    };
-    readonly msg: {
-        readonly message: string | undefined;
-    };
+    readonly username: string | undefined;
+    readonly date: string | undefined;
+    readonly message: string | undefined;
 }
 export interface Chat {
     readonly id: number;
-    readonly nome: string;
+    readonly name: string;
     readonly img: string;
     readonly online: boolean;
-    readonly unreadMsg: number;
-    readonly msgs: Messages[];
+    readonly unreadMessage: number;
+    readonly messages: Messages[];
 }
-

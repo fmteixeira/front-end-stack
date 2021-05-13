@@ -18,23 +18,16 @@ const ChatColumnMessages: FC<Props> = ({ chats, inputValue }: Props) => {
         return value.toLowerCase().replace(/\s/g, "");
     };
 
-    nameSearch(inputValue);
-
     return (
         <div className="h-full overflow-y-auto p-2">
             <div className="grid gap-y-3">
                 {chats.map((chat, index) => {
                     return (
-                        nameSearch(chat.nome).includes(nameSearch(inputValue)) && (
+                        nameSearch(chat.name).includes(nameSearch(inputValue)) && (
                             <ChatBox
                                 key={chat.id}
                                 setChat={() => setCurrentChat(index)}
-                                userAvatar={chat.img}
-                                userName={chat.nome}
-                                isUserOnline={chat.online}
-                                msgText={chat.msgs[chat.msgs.length - 1] && chat.msgs[chat.msgs.length - 1].msg.message}
-                                lastMsgTime={chat.msgs[chat.msgs.length - 1] && chat.msgs[chat.msgs.length - 1].from.date}
-                                msgsNum={chat.unreadMsg}
+                                chat={chat}
                                 active={currentChat === chat.id}
                             />
                         )
