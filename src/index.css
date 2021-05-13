@@ -28,6 +28,16 @@
         --blue-start: #7cb8f7;
         --blue-end: #2a8bf2;
     }
+
+    ::-webkit-scrollbar {
+        width: 8px;               /* width of the entire scrollbar */
+    }
+      
+      
+    ::-webkit-scrollbar-thumb {
+        background-color: #929292;    /* color of the scroll thumb */
+        border-radius: 50px; /* creates padding around scroll thumb */
+      }
 }
 
 * {
