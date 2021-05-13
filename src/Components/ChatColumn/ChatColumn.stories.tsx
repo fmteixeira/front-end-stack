@@ -15,7 +15,7 @@ export default {
 
 // Component Story
 const Template: Story<Props> = (args) => (
-    <div className="h-256">
+    <div className="h-screen w-160">
         <ChatColumn {...args} />
     </div>
 );
