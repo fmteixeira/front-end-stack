@@ -1,13 +1,15 @@
 import { FC, useState } from "react";
-import MessageGroup from "../MessageGroup/MessageGroup"
-import ChatInput from "../ChatInput/ChatInput"
-import ChatHeader from "../ChatHeader/ChatHeader"
-import DayLine from "../DayLine/DayLine"
+import MessageGroup from "../MessageGroup/MessageGroup";
+import ChatInput from "../ChatInput/ChatInput";
+import ChatHeader from "../ChatHeader/ChatHeader";
+import DayLine from "../DayLine/DayLine";
 import moment from "moment";
-import userAvatar from "../../resources/media/icons/userAvatar.svg"
+import userAvatar from "../../resources/media/icons/userAvatar.svg";
 
-
-import {Message as MessageTextInterface, MessageFile as MessageFileInterface} from "../../resources/typing/interfaces"
+import {
+    Message as MessageTextInterface,
+    MessageFile as MessageFileInterface,
+} from "../../resources/typing/interfaces";
 import clsx from "clsx";
 
 // Components
@@ -17,67 +19,95 @@ import clsx from "clsx";
 // Resources
 
 export interface Props {
-    avatarIcon: string,
-    name: string,
-    messages: Array<MessageTextInterface | MessageFileInterface>
-};
+    avatarIcon: string;
+    name: string;
+    messages: Array<MessageTextInterface | MessageFileInterface>;
+}
 
-const ConversationColumn: FC<Props> = ({avatarIcon, name, messages}) => {
-
-
-    const groupMessages = (messages: Array<MessageTextInterface | MessageFileInterface>) =>{
+const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
+    const groupMessages = (messages: Array<MessageTextInterface | MessageFileInterface>) => {
         return messages.reduce(
-            (acc:Array<Array<MessageTextInterface | MessageFileInterface>>, 
-                value:MessageTextInterface | MessageFileInterface) => {
-            // compare the current value with the last item in the collected array
-            if (acc.length && acc[acc.length - 1][0].userId === value.userId) {
-              // append the current value to it if it is matching
-              acc[acc.length - 1].push(value);
-            } else {
-              // append the new value at the end of the collected array
-              acc.push([value]);        }
-            return acc;
-          }, []);
-    }
+            (
+                acc: Array<Array<MessageTextInterface | MessageFileInterface>>,
+                value: MessageTextInterface | MessageFileInterface,
+            ) => {
+                // compare the current value with the last item in the collected array
+                if (acc.length && acc[acc.length - 1][0].userId === value.userId) {
+                    // append the current value to it if it is matching
+                    acc[acc.length - 1].push(value);
+                } else {
+                    // append the new value at the end of the collected array
+                    acc.push([value]);
+                }
+                return acc;
+            },
+            [],
+        );
+    };
 
     const userId = 1;
 
-    const [currentMessages, setCurrentMessages]=useState<Array<Array<MessageTextInterface | MessageFileInterface>>>(groupMessages(messages));
-    
-    const sendMessage = (text:string)=> {
-        if (currentMessages[currentMessages.length -1 ][0].userId === userId) {
-            setCurrentMessages( [...currentMessages.slice(0,-1), [...currentMessages[currentMessages.length -1], 
-            {userId:userId, text:text, id:20, date: new Date (2021,5,13)
-            }]])
-            }
+    const [currentMessages, setCurrentMessages] = useState<Array<Array<MessageTextInterface | MessageFileInterface>>>(
+        groupMessages(messages),
+    );
 
-        console.log(currentMessages)
-    }
-
+    const sendMessage = (text: string) => {
+        if (currentMessages[currentMessages.length - 1][0].userId === userId) {
+            setCurrentMessages([
+                ...currentMessages.slice(0, -1),
+                [
+                    ...currentMessages[currentMessages.length - 1],
+                    { userId: userId, text: text, id: 20, date: new Date(2021, 5, 13) },
+                ],
+            ]);
+        } else {
+            setCurrentMessages([
+                ...currentMessages,
+                [{ userId: userId, text: text, id: 20, date: new Date(2021, 5, 13) }],
+            ]);
+        }
+    };
 
     return (
-        <div>
         <div className="h-160 bg-white-100 grid grid-rows-[auto,1fr,auto]">
             <ChatHeader avatarIcon={avatarIcon} name={name} />
-            <div className="overflow-y-auto pb-10  grid gap-5 mr-8 ml-8" >
-            {currentMessages.map((messageGroup, idx) => { return(
-                <div className={clsx("grid", 
-                messageGroup[0].userId === userId ? "grid-cols-[1fr,4fr]":"grid-cols-[4fr,1fr]")}>
-                    <div className={clsx(messageGroup[0].userId === userId && "col-start-2")}>
-                    <MessageGroup key={idx} userAvatar={userAvatar} messages={messageGroup} isActiveUser={messageGroup[0].userId === 1}/>
-                    </div>
-                </div>
-            )})}
+            <div className="overflow-y-auto pb-10  grid gap-5 pl-2 pr-4 mr-2">
+                {currentMessages.map((messageGroup, idx) => {
+                    return (
+                        <div
+                            className={clsx(
+                                "grid",
+                                messageGroup[0].userId === userId ? "grid-cols-[1fr,4fr]" : "grid-cols-[4fr,1fr]",
+                            )}
+                        >
+                            <div className={clsx(messageGroup[0].userId === userId && "col-start-2")}>
+                                <MessageGroup
+                                    key={idx}
+                                    userAvatar={userAvatar}
+                                    messages={messageGroup}
+                                    isActiveUser={messageGroup[0].userId === 1}
+                                />
+                            </div>
+
+                            {currentMessages.length - idx <= 2 &&
+                                messageGroup[0].userId !== userId &&
+                                (currentMessages[idx + 1] === undefined ||
+                                    moment(currentMessages[idx + 1][0].date).diff(
+                                        moment(messageGroup[messageGroup.length - 1].date),
+                                        "days",
+                                    ) >= 1) && (
+                                    <div className="col-span-full">
+                                        <DayLine date={messageGroup[messageGroup.length - 1].date} />
+                                    </div>
+                                )}
+                        </div>
+                    );
+                })}
             </div>
-            <div className="mr-8 ml-8 mb-5" >
-            <ChatInput handleSubmit={(text:string) => sendMessage(text)}/>
+            <div className="mr-8 ml-8 mb-5">
+                <ChatInput handleSubmit={(text) => sendMessage(text)} />
             </div>
-            
         </div>
-       <div>
-            <button onClick={() => console.log(currentMessages[currentMessages.length -1 ][0].userId === userId)}>asdfasdfasdf </button>
-       </div>
-       </div>
     );
 };
 

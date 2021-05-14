@@ -19,7 +19,10 @@ interface Props {
 const MessageText: FC<Props> = ({ text, date, isLast, isActiveUser }) => {
     return (
         <div
-            className={clsx("grid gap-1 gap-x-3 items-center", isActiveUser ? "grid-cols-[auto,1fr] " : "grid-cols-[1fr,auto]")}
+            className={clsx(
+                "grid gap-1 gap-x-3 items-center",
+                isActiveUser ? "grid-cols-[auto,1fr] " : "grid-cols-[1fr,auto]",
+            )}
         >
             <p
                 className={clsx(

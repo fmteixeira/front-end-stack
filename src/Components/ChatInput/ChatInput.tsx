@@ -12,10 +12,10 @@ import send from "../../resources/media/icons/send.svg";
 // Resources
 
 export interface Props {
-    handleSubmit: (text:string) => void
+    handleSubmit: (text: string) => void;
 }
 
-const ChatInput: FC<Props> = ({handleSubmit}) => {
+const ChatInput: FC<Props> = ({ handleSubmit }) => {
     const [message, setMessage] = useState("");
     const [showAttachments, setShowAttachments] = useState(false);
     const [showEmojis, setShowEmojis] = useState(false);
