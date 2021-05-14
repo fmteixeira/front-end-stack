@@ -9,7 +9,6 @@ export interface Message {
     readonly date: Date;
     readonly userId: number;
     readonly text: string;
-
 }
 
 export interface MessageFile {
@@ -18,7 +17,6 @@ export interface MessageFile {
     readonly userId: number;
     readonly text?: string;
     readonly file: SentFile;
-    
 }
 export interface SentFile {
     readonly fileEncoded: string;
