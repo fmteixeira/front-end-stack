@@ -26,3 +26,17 @@ export interface SentFile {
     readonly fileType: DownloadableFileFormats;
     readonly fileSize: string;
 }
+
+export interface Messages {
+    readonly username: string | undefined;
+    readonly date: string | undefined;
+    readonly message: string | undefined;
+}
+export interface Chat {
+    readonly id: number;
+    readonly name: string;
+    readonly img: string;
+    readonly online: boolean;
+    readonly unreadMessageCounter: number;
+    readonly messages: Messages[];
+}

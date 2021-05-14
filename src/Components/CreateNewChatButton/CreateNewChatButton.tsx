@@ -21,13 +21,20 @@ const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
             className={clsx(
                 darkMode ? "bg-dark" : "bg-gradient-to-r from-blue-start to-blue-end",
                 "rounded-md",
-                "px-6 py-5",
-                "text-xl text-white-100",
+                "px-3 py-3 sm:px-4 sm:py-4 md:px-6 md:py-5",
+                "text-sm sm:text-base md:text-xl text-white-100",
                 "grid grid-cols-[auto,1fr] gap-2 place-items-center",
+                "group",
+                "outline-none focus:outline-none",
+                "hover:shadow-createChatButton transition-all ease-in-out duration-200",
             )}
         >
             <div>
-                <img src={plus} alt="" className="h-6 w-6" />
+                <img
+                    src={plus}
+                    alt=""
+                    className="h-6 w-6 transform group-hover:rotate-180 transition-all ease-in-out duration-200"
+                />
             </div>
             <div>{text}</div>
         </button>
