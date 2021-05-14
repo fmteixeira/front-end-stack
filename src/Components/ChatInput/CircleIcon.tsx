@@ -20,9 +20,9 @@ const CircleIcon: FC<Props> = ({ icon, gradient }) => {
             onMouseEnter={() => setActive(true)}
             onMouseLeave={() => setActive(false)}
             className={clsx(
-                "h-10 w-10 rounded-full grid place-items-center ",
+                " h-10 w-10 rounded-full grid place-items-center ",
                 active
-                    ? "bg-white-100 border-blue border-solid border-2"
+                    ? " transition duration-150 ease-in-out shadow-cirleIconShadow bg-white-100"
                     : gradient
                     ? "bg-gradient-to-r from-blue-start to-blue-end"
                     : "bg-blue",

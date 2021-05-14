@@ -11,9 +11,11 @@ import smile from "../../resources/media/icons/smile.svg";
 import send from "../../resources/media/icons/send.svg";
 // Resources
 
-export interface Props {}
+export interface Props {
+    handleSubmit: (text:string) => void
+}
 
-const ChatInput: FC<Props> = ({}) => {
+const ChatInput: FC<Props> = ({handleSubmit}) => {
     const [message, setMessage] = useState("");
     const [showAttachments, setShowAttachments] = useState(false);
     const [showEmojis, setShowEmojis] = useState(false);
@@ -49,7 +51,7 @@ const ChatInput: FC<Props> = ({}) => {
                 {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
             </div>
 
-            <div className="grid grid-cols-[auto,1fr,auto] gap-x-4 items-center ">
+            <div className="grid grid-cols-[auto,1fr,auto] gap-x-4 items-center border-t-2 pt-5 rounded-sm  border-gray border-opacity-20">
                 <button onClick={onPlusClick}>
                     <CircleIcon icon={plus} gradient={true} />
                 </button>
@@ -67,7 +69,7 @@ const ChatInput: FC<Props> = ({}) => {
                     <button onClick={() => onSmileClick()}>
                         <img src={smile} alt=""></img>
                     </button>
-                    <button>
+                    <button onClick={() => handleSubmit(message)}>
                         <CircleIcon icon={send} gradient={true} />
                     </button>
                 </div>

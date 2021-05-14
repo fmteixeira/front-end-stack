@@ -39,7 +39,7 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
 
     return (
         <div
-            className={clsx("grid gap-3 items-center", isActiveUser ? "grid-cols-[auto,1fr]" : "grid-cols-[1fr,auto]")}
+            className={clsx("grid gap-1 gap-x-3 items-center", isActiveUser ? "grid-cols-[auto,1fr]" : "grid-cols-[1fr,auto]")}
         >
             <div
                 className={clsx(
