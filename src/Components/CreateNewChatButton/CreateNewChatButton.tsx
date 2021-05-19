@@ -33,7 +33,7 @@ const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
                 <img
                     src={plus}
                     alt=""
-                    className="h-6 w-6 transform group-hover:rotate-180 transition-all ease-in-out duration-200"
+                    className="h-6 w-6 scale-75 sm:scale-100 transform group-hover:rotate-180 transition-all ease-in-out duration-200"
                 />
             </div>
             <div>{text}</div>
