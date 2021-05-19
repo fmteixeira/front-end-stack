@@ -7,11 +7,11 @@ import moment from "moment";
 // Hooks
 // Pages
 // Resources
-import { Chat } from "../../resources/typing/interfaces";
+import { ChatMessages } from "../../resources/typing/interfaces";
 
 export interface Props {
     setChat: () => void;
-    chat: Chat;
+    chat: ChatMessages;
     active: boolean;
 }
 
