@@ -5,9 +5,9 @@ import ChatBox from "../../ChatBox/ChatBox";
 // Hooks
 // Pages
 // Resources
-import { Chat } from "../../../resources/typing/interfaces";
+import { ChatMessages } from "../../../resources/typing/interfaces";
 interface Props {
-    chats: Chat[];
+    chats: ChatMessages[];
     inputValue: string;
 }
 

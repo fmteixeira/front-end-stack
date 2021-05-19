@@ -6,16 +6,16 @@ import ChatColumnMessages from "./ChatColumnMessages/ChatColumnMessages";
 // Hooks
 // Pages
 // Resources
-import { Chat } from "../../resources/typing/interfaces";
+import { ChatMessages } from "../../resources/typing/interfaces";
 export interface Props {
-    chats: Chat[];
+    chats: ChatMessages[];
 }
 
 const ChatColumn: FC<Props> = ({ chats }: Props) => {
     const [searchInput, setSearchInput] = useState<string>("");
 
     return (
-        <div className="bg-white-300 h-full w-full grid grid-rows-[auto,1fr]">
+        <div className="h-screen w-full grid grid-rows-[auto,1fr]">
             <ChatColumnHeader setSearch={setSearchInput} />
             <ChatColumnMessages chats={chats} inputValue={searchInput} />
         </div>

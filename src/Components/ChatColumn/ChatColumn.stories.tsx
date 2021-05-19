@@ -15,7 +15,7 @@ export default {
 
 // Component Story
 const Template: Story<Props> = (args) => (
-    <div className="h-screen w-160">
+    <div className="bg-white-300 h-screen w-160">
         <ChatColumn {...args} />
     </div>
 );

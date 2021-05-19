@@ -21,7 +21,7 @@ const CreateNewChatButton: FC<Props> = ({ text }: Props) => {
             className={clsx(
                 darkMode ? "bg-dark" : "bg-gradient-to-r from-blue-start to-blue-end",
                 "rounded-md",
-                "px-3 py-3 sm:px-4 sm:py-4 md:px-6 md:py-5",
+                "px-2 py-2 sm:px-4 sm:py-4 md:px-6 md:py-5",
                 "text-sm sm:text-base md:text-xl text-white-100",
                 "grid grid-cols-[auto,1fr] gap-2 place-items-center",
                 "group",

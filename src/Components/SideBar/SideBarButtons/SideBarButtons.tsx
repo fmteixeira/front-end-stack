@@ -20,8 +20,8 @@ const SideBarButtons: FC<Props> = ({}) => {
     const [currentNav, setCurrentNav] = useState<number>(1);
 
     return (
-        <div className="h-212">
-            <div className="grid pt-16 gap-y-5">
+        <div className="h-full">
+            <div className="h-full grid gap-y-5 grid-rows-[auto,auto,auto,auto,auto,auto,1fr]">
                 <HeaderButton
                     setNav={() => setCurrentNav(0)}
                     active={currentNav === 0}

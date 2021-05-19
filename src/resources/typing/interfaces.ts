@@ -28,7 +28,7 @@ export interface Messages {
     readonly date: string | undefined;
     readonly message: string | undefined;
 }
-export interface Chat {
+export interface ChatMessages {
     readonly id: number;
     readonly name: string;
     readonly img: string;
