@@ -1,21 +1,22 @@
-import { FC, useState } from "react";
+import { FC, useState, useRef, useEffect } from "react";
 import MessageGroup from "../MessageGroup/MessageGroup";
 import ChatInput from "../ChatInput/ChatInput";
 import ChatHeader from "../ChatHeader/ChatHeader";
 import DayLine from "../DayLine/DayLine";
-import moment from "moment";
-import userAvatar from "../../resources/media/icons/userAvatar.svg";
-
 import {
     Message as MessageTextInterface,
     MessageFile as MessageFileInterface,
 } from "../../resources/typing/interfaces";
 import clsx from "clsx";
 
+import moment from "moment";
+import { v4 as uuidv4 } from "uuid";
 // Components
+import useUser from "../../Context/userContext";
 // Context
 // Hooks
 // Pages
+import userAvatar from "../../resources/media/icons/userAvatar.svg";
 // Resources
 
 export interface Props {
@@ -24,6 +25,14 @@ export interface Props {
     messages: Array<MessageTextInterface | MessageFileInterface>;
 }
 
+export interface ScrollProps {}
+
+const AlwaysScrollToBottom: FC<ScrollProps> = () => {
+    const scrollRef = useRef<any>();
+    useEffect(() => scrollRef.current.scrollIntoView());
+    return <div ref={scrollRef} />;
+};
+
 const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
     const groupMessages = (messages: Array<MessageTextInterface | MessageFileInterface>) => {
         return messages.reduce(
@@ -31,12 +40,9 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
                 acc: Array<Array<MessageTextInterface | MessageFileInterface>>,
                 value: MessageTextInterface | MessageFileInterface,
             ) => {
-                // compare the current value with the last item in the collected array
                 if (acc.length && acc[acc.length - 1][0].userId === value.userId) {
-                    // append the current value to it if it is matching
                     acc[acc.length - 1].push(value);
                 } else {
-                    // append the new value at the end of the collected array
                     acc.push([value]);
                 }
                 return acc;
@@ -45,67 +51,80 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
         );
     };
 
-    const userId = 1;
-
     const [currentMessages, setCurrentMessages] = useState<Array<Array<MessageTextInterface | MessageFileInterface>>>(
         groupMessages(messages),
     );
 
+    const daysBetweenDates = (date1: Date, date2: Date): number => {
+        return moment(date1).diff(moment(date2), "days");
+    };
+
+    const loggedUserId = useUser((state: any) => state.userId);
+
     const sendMessage = (text: string) => {
-        if (currentMessages[currentMessages.length - 1][0].userId === userId) {
+        if (currentMessages[currentMessages.length - 1][0].userId === loggedUserId) {
             setCurrentMessages([
                 ...currentMessages.slice(0, -1),
                 [
                     ...currentMessages[currentMessages.length - 1],
-                    { userId: userId, text: text, id: 20, date: new Date(2021, 5, 13) },
+                    { userId: loggedUserId, text: text, id: uuidv4(), date: new Date() },
                 ],
             ]);
         } else {
             setCurrentMessages([
                 ...currentMessages,
-                [{ userId: userId, text: text, id: 20, date: new Date(2021, 5, 13) }],
+                [{ userId: loggedUserId, text: text, id: uuidv4(), date: new Date(2021, 5, 13) }],
             ]);
         }
     };
 
     return (
-        <div className="h-160 bg-white-100 grid grid-rows-[auto,1fr,auto]">
-            <ChatHeader avatarIcon={avatarIcon} name={name} />
-            <div className="overflow-y-auto pb-10  grid gap-5 pl-2 pr-4 mr-2">
-                {currentMessages.map((messageGroup, idx) => {
-                    return (
-                        <div
-                            className={clsx(
-                                "grid",
-                                messageGroup[0].userId === userId ? "grid-cols-[1fr,4fr]" : "grid-cols-[4fr,1fr]",
-                            )}
-                        >
-                            <div className={clsx(messageGroup[0].userId === userId && "col-start-2")}>
-                                <MessageGroup
-                                    key={idx}
-                                    userAvatar={userAvatar}
-                                    messages={messageGroup}
-                                    isActiveUser={messageGroup[0].userId === 1}
-                                />
-                            </div>
+        <div className="bg-white-100 h-full w-full text-sm md:text-base">
+            <div className="grid grid-rows-[auto,1fr,auto] h-full relative">
+                <ChatHeader avatarIcon={avatarIcon} name={name} />
 
-                            {currentMessages.length - idx <= 2 &&
-                                messageGroup[0].userId !== userId &&
-                                (currentMessages[idx + 1] === undefined ||
-                                    moment(currentMessages[idx + 1][0].date).diff(
-                                        moment(messageGroup[messageGroup.length - 1].date),
-                                        "days",
-                                    ) >= 1) && (
-                                    <div className="col-span-full">
-                                        <DayLine date={messageGroup[messageGroup.length - 1].date} />
-                                    </div>
+                <div className="w-full overflow-y-auto bg-white-100 grid gap-y-2 pt-2 pl-2 pr-2 ">
+                    {currentMessages.map((messageGroup, idx) => {
+                        return (
+                            <div
+                                key={idx}
+                                className={clsx(
+                                    "grid",
+                                    messageGroup[0].userId === loggedUserId
+                                        ? "grid-cols-[1fr,4fr]"
+                                        : "grid-cols-[4fr,1fr]",
                                 )}
-                        </div>
-                    );
-                })}
-            </div>
-            <div className="mr-8 ml-8 mb-5">
-                <ChatInput handleSubmit={(text) => sendMessage(text)} />
+                            >
+                                <div className={clsx(messageGroup[0].userId === loggedUserId && "col-start-2")}>
+                                    <MessageGroup
+                                        key={idx}
+                                        userAvatar={userAvatar}
+                                        messages={messageGroup}
+                                        isActiveUser={messageGroup[0].userId === loggedUserId}
+                                    />
+                                </div>
+
+                                {currentMessages.length - idx <= 2 &&
+                                    messageGroup[0].userId !== loggedUserId &&
+                                    (currentMessages[idx + 1] === undefined ||
+                                        daysBetweenDates(
+                                            currentMessages[idx + 1][0].date,
+                                            messageGroup[messageGroup.length - 1].date,
+                                        ) >= 1) && (
+                                        <div className="col-span-full">
+                                            <DayLine date={messageGroup[messageGroup.length - 1].date} />
+                                        </div>
+                                    )}
+
+                                <AlwaysScrollToBottom />
+                            </div>
+                        );
+                    })}
+                </div>
+
+                <div className="w-full bg-white-100 ">
+                    <ChatInput handleSubmit={(text) => sendMessage(text)} />
+                </div>
             </div>
         </div>
     );

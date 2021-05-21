@@ -75,7 +75,7 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
                         </div>
                     </button>
                 ) : (
-                    <div className="grid gap-y-1 ">
+                    <div className="grid gap-y-1 break-all">
                         <p className={clsx(isActiveUser && "text-right")}>{text}</p>
 
                         <button

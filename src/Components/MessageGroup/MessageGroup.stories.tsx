@@ -31,6 +31,7 @@ const props: Props = {
             text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
             date: new Date(2000, 4, 20, 12, 30),
+            userId: 0,
         },
         {
             id: 2,
@@ -42,6 +43,7 @@ const props: Props = {
                 fileEncoded: imageExample,
                 fileType: "Png",
             },
+            userId: 0,
         },
         {
             id: 3,
@@ -52,11 +54,13 @@ const props: Props = {
                 fileEncoded: imageExample,
                 fileType: "Png",
             },
+            userId: 1,
         },
         {
             id: 4,
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
             date: new Date(2021, 4, 5, 13, 30),
+            userId: 0,
         },
     ],
     isActiveUser: false,

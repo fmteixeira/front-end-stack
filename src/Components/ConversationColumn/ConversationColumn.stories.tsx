@@ -26,20 +26,20 @@ const Template: Story<Props> = (args) => <ConversationColumn {...args} />;
 
 const baseMessages: Array<any> = [
     {
-        id: 0,
-        text: "TEM DE APARECER PORBAIXO DISTO",
+        id: "000",
+        text: "Então já não sei como fazer a sinopse",
         date: new Date(1998, 4, 20, 12, 30),
         userId: 0,
     },
     {
-        id: 1,
+        id: "1",
         text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
+            "Lorem ipsum dolor sit amet consectetur adip elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
         date: new Date(2000, 4, 20, 12, 30),
         userId: 1,
     },
     {
-        id: 2,
+        id: "2",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, debitis.",
         date: new Date(2000, 4, 20, 11, 30),
         file: {
@@ -51,7 +51,7 @@ const baseMessages: Array<any> = [
         userId: 1,
     },
     {
-        id: 3,
+        id: "3",
         date: new Date(2000, 4, 20, 12, 30),
         file: {
             fileName: "imagem1.jpg",
@@ -69,7 +69,7 @@ const props: Props = {
     messages: [
         ...baseMessages,
         {
-            id: 4,
+            id: "4",
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
             date: new Date(2021, 4, 11, 13, 30),
             userId: 2,
@@ -87,10 +87,24 @@ DaylineEntreMensagens.args = {
     messages: [
         ...props.messages,
         {
-            id: 5,
+            id: "5",
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
             date: new Date(2021, 4, 14, 13, 30),
             userId: 1,
+        },
+    ],
+};
+
+export const UltimaMensagemMenosUmDia = Template.bind({});
+UltimaMensagemMenosUmDia.args = {
+    ...props,
+    messages: [
+        ...props.messages,
+        {
+            id: "6",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
+            date: new Date(2021, 4, 20, 13, 30),
+            userId: 2,
         },
     ],
 };

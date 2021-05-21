@@ -44,15 +44,25 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
         setShowEmojis(!showEmojis);
     };
 
+    const handleMessageSubmit = (event: any) => {
+        event.preventDefault();
+        setShowAttachments(false);
+        if (message.length > 0) handleSubmit(message);
+        setMessage("");
+    };
+
     return (
-        <div className="relative">
-            <div className="absolute bottom-12 ">{showAttachments && <Attachment />}</div>
-            <div className="absolute right-0 bottom-12">
+        <div className=" relative pl-4 pr-4">
+            <div className="absolute bottom-20 ">{showAttachments && <Attachment />}</div>
+            <div className="absolute right-0 bottom-20">
                 {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
             </div>
 
-            <div className="grid grid-cols-[auto,1fr,auto] gap-x-4 items-center border-t-2 pt-5 rounded-sm  border-gray border-opacity-20">
-                <button onClick={onPlusClick}>
+            <form
+                onSubmit={handleMessageSubmit}
+                className="grid grid-cols-[auto,1fr,auto] h-20 place-items-center gap-x-4 border-t-2 rounded-sm border-gray border-opacity-20"
+            >
+                <button type="button" onClick={onPlusClick}>
                     <CircleIcon icon={plus} gradient={true} />
                 </button>
 
@@ -66,14 +76,15 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
                 ></input>
 
                 <div className="grid grid-cols-2 gap-x-3 place-items-center">
-                    <button onClick={() => onSmileClick()}>
+                    <button type="button" onClick={() => onSmileClick()}>
                         <img src={smile} alt=""></img>
                     </button>
-                    <button onClick={() => handleSubmit(message)}>
+
+                    <button type="submit">
                         <CircleIcon icon={send} gradient={true} />
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     );
 };
