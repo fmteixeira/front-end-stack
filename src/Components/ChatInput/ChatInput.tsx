@@ -37,13 +37,11 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
     };
 
     const onPlusClick = () => {
-        setShowEmojis(false);
-        setShowAttachments(!showAttachments);
+        setShowAttachments(state => !state)
     };
 
     const onSmileClick = () => {
-        setShowAttachments(false);
-        setShowEmojis(!showEmojis);
+        setShowEmojis(state => !state)
     };
 
     const handleMessageSubmit = (event: any) => {
@@ -55,35 +53,28 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
 
     return (
         <div className=" relative pl-4 pr-4">
-            <div className="absolute bottom-20 ">
-                <Transition
-                    show={showAttachments}
-                    enter="transition transform duration-300"
-                    enterFrom="opacity-0 translate-y-8"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition duration-300"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                >
-                    <OutsideClickHandler onOutsideClick={() => setShowAttachments(false)}>
-                        {showAttachments && <Attachment />}
-                    </OutsideClickHandler>
-                </Transition>
-            </div>
-
-            <OutsideClickHandler onOutsideClick={() => setShowEmojis(false)}>
-                <div className="absolute right-0 bottom-20">
-                    {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
-                </div>
-            </OutsideClickHandler>
-
             <form
                 onSubmit={handleMessageSubmit}
                 className="grid grid-cols-[auto,1fr,auto] h-20 place-items-center gap-x-4 border-t-2 rounded-sm border-gray border-opacity-20"
             >
+                 <OutsideClickHandler onOutsideClick={() => { console.log("FODASE" + showAttachments); setShowAttachments(false)}}>
+                    <div className="absolute bottom-20 ">
+                        <Transition
+                            show={showAttachments}
+                            enter="transition transform duration-300"
+                            enterFrom="opacity-0 translate-y-8"
+                            enterTo="opacity-100 translate-y-0"
+                            leave="transition duration-300"
+                            leaveFrom="opacity-100"
+                            leaveTo="opacity-0"
+                        >
+                                {showAttachments && <Attachment />}   
+                        </Transition>
+                    </div>
                 <button type="button" onClick={onPlusClick}>
                     <CircleIcon icon={plus} gradient={true} />
                 </button>
+                </OutsideClickHandler>
 
                 <input
                     className="w-full min-w-0 text-base sm:text-xl bg-transparent text-gray"
@@ -95,16 +86,24 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
                 ></input>
 
                 <div className="grid grid-cols-2 gap-x-3 place-items-center">
+                <OutsideClickHandler onOutsideClick={() =>{setShowEmojis(false)}}>
+                    <div className="absolute right-0 bottom-20">
+                        {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
+                    </div>
+                
                     <button type="button" onClick={() => onSmileClick()}>
                         <img src={smile} alt=""></img>
                     </button>
+                    </OutsideClickHandler>
 
                     <button type="submit">
                         <CircleIcon icon={send} gradient={true} />
                     </button>
                 </div>
             </form>
+
         </div>
+        
     );
 };
 
