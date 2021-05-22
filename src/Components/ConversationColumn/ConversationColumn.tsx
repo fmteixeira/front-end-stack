@@ -104,13 +104,12 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
                                     />
                                 </div>
 
-                                {currentMessages.length - idx <= 2 &&
+                                {currentMessages.length - idx === 2 &&
                                     messageGroup[0].userId !== loggedUserId &&
-                                    (currentMessages[idx + 1] === undefined ||
                                         daysBetweenDates(
                                             currentMessages[idx + 1][0].date,
                                             messageGroup[messageGroup.length - 1].date,
-                                        ) >= 1) && (
+                                        ) >= 1 && (
                                         <div className="col-span-full">
                                             <DayLine date={messageGroup[messageGroup.length - 1].date} />
                                         </div>
