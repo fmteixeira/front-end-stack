@@ -30,7 +30,7 @@ const props: Props = {
             id: "1",
             text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
-            date:"2021-05-18",
+            date: "2021-05-18",
             userId: 0,
         },
         {

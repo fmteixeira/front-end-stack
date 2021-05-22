@@ -37,11 +37,11 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
     };
 
     const onPlusClick = () => {
-        setShowAttachments(state => !state)
+        setShowAttachments((state) => !state);
     };
 
     const onSmileClick = () => {
-        setShowEmojis(state => !state)
+        setShowEmojis((state) => !state);
     };
 
     const handleMessageSubmit = (event: any) => {
@@ -57,7 +57,12 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
                 onSubmit={handleMessageSubmit}
                 className="grid grid-cols-[auto,1fr,auto] h-20 place-items-center gap-x-4 border-t-2 rounded-sm border-gray border-opacity-20"
             >
-                 <OutsideClickHandler onOutsideClick={() => { console.log("FODASE" + showAttachments); setShowAttachments(false)}}>
+                <OutsideClickHandler
+                    onOutsideClick={() => {
+                        console.log("FODASE" + showAttachments);
+                        setShowAttachments(false);
+                    }}
+                >
                     <div className="absolute bottom-20 ">
                         <Transition
                             show={showAttachments}
@@ -68,12 +73,12 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                                {showAttachments && <Attachment />}   
+                            {showAttachments && <Attachment />}
                         </Transition>
                     </div>
-                <button type="button" onClick={onPlusClick}>
-                    <CircleIcon icon={plus} gradient={true} />
-                </button>
+                    <button type="button" onClick={onPlusClick}>
+                        <CircleIcon icon={plus} gradient={true} />
+                    </button>
                 </OutsideClickHandler>
 
                 <input
@@ -86,14 +91,18 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
                 ></input>
 
                 <div className="grid grid-cols-2 gap-x-3 place-items-center">
-                <OutsideClickHandler onOutsideClick={() =>{setShowEmojis(false)}}>
-                    <div className="absolute right-0 bottom-20">
-                        {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
-                    </div>
-                
-                    <button type="button" onClick={() => onSmileClick()}>
-                        <img src={smile} alt=""></img>
-                    </button>
+                    <OutsideClickHandler
+                        onOutsideClick={() => {
+                            setShowEmojis(false);
+                        }}
+                    >
+                        <div className="absolute right-0 bottom-20">
+                            {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
+                        </div>
+
+                        <button type="button" onClick={() => onSmileClick()}>
+                            <img src={smile} alt=""></img>
+                        </button>
                     </OutsideClickHandler>
 
                     <button type="submit">
@@ -101,9 +110,7 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
                     </button>
                 </div>
             </form>
-
         </div>
-        
     );
 };
 

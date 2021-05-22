@@ -21,7 +21,11 @@ export default {
 } as Meta;
 
 // Component Story
-const Template: Story<Props> = (args) => <div className="h-screen"><ConversationColumn {...args}/> </div> ;
+const Template: Story<Props> = (args) => (
+    <div className="h-screen">
+        <ConversationColumn {...args} />{" "}
+    </div>
+);
 
 // Component Props
 

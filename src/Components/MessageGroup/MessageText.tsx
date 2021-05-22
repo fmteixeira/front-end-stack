@@ -21,7 +21,7 @@ const MessageText: FC<Props> = ({ text, date, isLast, isActiveUser }) => {
         <div className={clsx("grid", isActiveUser ? "justify-items-end" : "justify-items-start")}>
             <div
                 className={clsx(
-                    "grid gap-1 gap-x-3 items-center",
+                    "grid gap-1 gap-x-3 items-center break-words ",
                     isActiveUser ? "grid-cols-[auto,1fr]" : "grid-cols-[1fr,auto]",
                 )}
             >

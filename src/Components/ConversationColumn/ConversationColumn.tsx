@@ -73,7 +73,7 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
         } else {
             setCurrentMessages([
                 ...currentMessages,
-                [{ userId: loggedUserId, text: text, id: uuidv4(), date: moment().toString()}],
+                [{ userId: loggedUserId, text: text, id: uuidv4(), date: moment().toString() }],
             ]);
         }
     };
@@ -106,10 +106,10 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
 
                                 {currentMessages.length - idx === 2 &&
                                     messageGroup[0].userId !== loggedUserId &&
-                                        daysBetweenDates(
-                                            currentMessages[idx + 1][0].date,
-                                            messageGroup[messageGroup.length - 1].date,
-                                        ) >= 1 && (
+                                    daysBetweenDates(
+                                        currentMessages[idx + 1][0].date,
+                                        messageGroup[messageGroup.length - 1].date,
+                                    ) >= 1 && (
                                         <div className="col-span-full">
                                             <DayLine date={messageGroup[messageGroup.length - 1].date} />
                                         </div>
