@@ -34,3 +34,17 @@ Default.parameters = {
         url: "missing_figma_url", // Figma Url
     },
 };
+
+const NoChatProps: Props = {
+    username: "John Doe",
+    avatarUrl: sideBarAvatar,
+};
+
+export const NoChats = Template.bind({});
+NoChats.args = NoChatProps;
+NoChats.parameters = {
+    design: {
+        type: "figma",
+        url: "missing_figma_url", // Figma Url
+    },
+};

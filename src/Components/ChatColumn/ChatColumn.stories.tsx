@@ -20,9 +20,14 @@ const Template: Story<Props> = (args) => (
     </div>
 );
 
+function setChat(): () => void {
+    return Function;
+}
+
 // Component Props
 const props: Props = {
     chats: data,
+    setChat: setChat,
 };
 
 // Component Story Node
