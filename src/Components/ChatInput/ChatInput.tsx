@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { Transition } from '@headlessui/react'
 import Attachment from "./Attachment";
 import CircleIcon from "./CircleIcon";
 import Picker from "emoji-picker-react";
@@ -53,7 +54,21 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
 
     return (
         <div className=" relative pl-4 pr-4">
-            <div className="absolute bottom-20 ">{showAttachments && <Attachment />}</div>
+            <div className="absolute bottom-20 ">
+            <Transition
+                show={showAttachments}
+                enter="transition transform duration-300"
+                enterFrom="opacity-0 translate-y-8"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition duration-300"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+            >
+            
+                {showAttachments && <Attachment />}
+            </Transition>
+            </div>
+
             <div className="absolute right-0 bottom-20">
                 {showEmojis && <Picker onEmojiClick={onEmojiClick} pickerStyle={{ boxShadow: "none" }} />}
             </div>
