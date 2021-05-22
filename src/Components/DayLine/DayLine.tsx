@@ -7,7 +7,7 @@ import moment from "moment";
 // Resources
 
 export interface Props {
-    date: Date;
+    date: string;
 }
 
 const DayLine: FC<Props> = ({ date }: Props) => {

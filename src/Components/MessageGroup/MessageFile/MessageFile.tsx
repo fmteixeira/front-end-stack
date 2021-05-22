@@ -13,7 +13,7 @@ import { DownloadableFileFormats } from "../../../resources/typing/types";
 // Resources
 
 export interface Props {
-    date: Date;
+    date: string;
     isLast: boolean;
     text?: string;
     fileName: string;

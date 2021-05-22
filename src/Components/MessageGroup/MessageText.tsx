@@ -11,7 +11,7 @@ import MessageLastDate from "./MessageLastDate";
 
 interface Props {
     text: string;
-    date: Date;
+    date: string;
     isLast: boolean;
     isActiveUser: boolean;
 }

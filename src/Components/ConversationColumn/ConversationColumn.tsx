@@ -55,7 +55,7 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
         groupMessages(messages),
     );
 
-    const daysBetweenDates = (date1: Date, date2: Date): number => {
+    const daysBetweenDates = (date1: string, date2: string): number => {
         return moment(date1).diff(moment(date2), "days");
     };
 
@@ -67,13 +67,13 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
                 ...currentMessages.slice(0, -1),
                 [
                     ...currentMessages[currentMessages.length - 1],
-                    { userId: loggedUserId, text: text, id: uuidv4(), date: new Date() },
+                    { userId: loggedUserId, text: text, id: uuidv4(), date: moment().toString() },
                 ],
             ]);
         } else {
             setCurrentMessages([
                 ...currentMessages,
-                [{ userId: loggedUserId, text: text, id: uuidv4(), date: new Date(2021, 5, 13) }],
+                [{ userId: loggedUserId, text: text, id: uuidv4(), date: moment().toString()}],
             ]);
         }
     };

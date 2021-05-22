@@ -7,7 +7,7 @@ import moment from "moment";
 // Resources
 
 interface Props {
-    date: Date;
+    date: string;
 }
 
 const MessageLastDate: FC<Props> = ({ date }) => {

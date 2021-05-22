@@ -21,28 +21,28 @@ export default {
 } as Meta;
 
 // Component Story
-const Template: Story<Props> = (args) => <ConversationColumn {...args} />;
+const Template: Story<Props> = (args) => <div className="h-screen"><ConversationColumn {...args}/> </div> ;
 
 // Component Props
 
 const baseMessages: Array<any> = [
     {
-        id: "000",
-        text: "Então já não sei como fazer a sinopse",
-        date: new Date(1998, 4, 20, 12, 30),
+        id: "0",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, fuga?",
+        date: "2021-04-18",
         userId: 0,
     },
     {
         id: "1",
         text:
             "Lorem ipsum dolor sit amet consectetur adip elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
-        date: new Date(2000, 4, 20, 12, 30),
+        date: "2021-05-18",
         userId: 1,
     },
     {
         id: "2",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, debitis.",
-        date: new Date(2000, 4, 20, 11, 30),
+        date: "2021-05-18",
         file: {
             fileName: "imagem1.jpg",
             fileSize: "2 Gb",
@@ -53,7 +53,7 @@ const baseMessages: Array<any> = [
     },
     {
         id: "3",
-        date: new Date(2000, 4, 20, 12, 30),
+        date: "2021-05-13",
         file: {
             fileName: "imagem1.jpg",
             fileSize: "2 Gb",
@@ -72,7 +72,7 @@ const props: Props = {
         {
             id: "4",
             text: "a",
-            date: new Date(2021, 4, 11, 13, 30),
+            date: "2021-05-18",
             userId: 2,
         },
     ],
@@ -90,7 +90,7 @@ DaylineEntreMensagens.args = {
         {
             id: "5",
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
-            date: new Date(2021, 4, 14, 13, 30),
+            date: "2021-05-20",
             userId: 1,
         },
     ],
@@ -105,7 +105,7 @@ UltimaMensagemMenosUmDia.args = {
             id: "6",
             text:
                 "Lorem ipsum ipsa id officia velit ipsam quidem soluta neque deleniti labore culpa recus. Praesentium.",
-            date: moment().subtract(1, "hours").toDate(),
+            date: "2021-05-22",
             userId: 2,
         },
     ],

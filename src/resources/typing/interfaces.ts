@@ -6,14 +6,14 @@ export interface Example {
 }
 export interface Message {
     readonly id: string;
-    readonly date: Date;
+    readonly date: string;
     readonly userId: number;
     readonly text: string;
 }
 
 export interface MessageFile {
     readonly id: string;
-    readonly date: Date;
+    readonly date: string;
     readonly userId: number;
     readonly text?: string;
     readonly file: SentFile;

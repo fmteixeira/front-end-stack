@@ -30,13 +30,13 @@ const props: Props = {
             id: "1",
             text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
-            date: new Date(2000, 4, 20, 12, 30),
+            date:"2021-05-18",
             userId: 0,
         },
         {
             id: "2",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, debitis.",
-            date: new Date(2000, 4, 20, 11, 30),
+            date: "2021-05-18",
             file: {
                 fileName: "imagem1.jpg",
                 fileSize: "2 Gb",
@@ -47,7 +47,7 @@ const props: Props = {
         },
         {
             id: "3",
-            date: new Date(2000, 4, 20, 12, 30),
+            date: "2021-05-18",
             file: {
                 fileName: "imagem1.jpg",
                 fileSize: "2 Gb",
@@ -59,7 +59,7 @@ const props: Props = {
         {
             id: "4",
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.",
-            date: new Date(2021, 4, 5, 13, 30),
+            date: "2021-05-18",
             userId: 0,
         },
     ],
