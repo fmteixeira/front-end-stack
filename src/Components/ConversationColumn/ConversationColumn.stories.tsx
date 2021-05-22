@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment"
+import moment from "moment";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
@@ -62,7 +62,6 @@ const baseMessages: Array<any> = [
         },
         userId: 1,
     },
-
 ];
 
 const props: Props = {
@@ -104,8 +103,9 @@ UltimaMensagemMenosUmDia.args = {
         ...props.messages,
         {
             id: "6",
-            text: "Lorem ipsum ipsa id officia velit ipsam quidem soluta neque deleniti labore culpa recus. Praesentium.",
-            date: moment().subtract(1,'hours').toDate() ,
+            text:
+                "Lorem ipsum ipsa id officia velit ipsam quidem soluta neque deleniti labore culpa recus. Praesentium.",
+            date: moment().subtract(1, "hours").toDate(),
             userId: 2,
         },
     ],

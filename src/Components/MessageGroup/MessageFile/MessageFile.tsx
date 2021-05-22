@@ -81,7 +81,9 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
 
                             <button
                                 onClick={() => download(fileEncoded, fileType, fileName)}
-                                className={clsx(isActiveUser ? " grid grid-cols-[1fr,auto] " : "grid grid-cols-[auto,1fr]")}
+                                className={clsx(
+                                    isActiveUser ? " grid grid-cols-[1fr,auto] " : "grid grid-cols-[auto,1fr]",
+                                )}
                             >
                                 <img
                                     src={file}
@@ -105,12 +107,11 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
                 <button className={clsx(isActiveUser && "order-1")}>
                     <img src={ellipsis} alt="" />
                 </button>
-                </div>
+            </div>
 
             <div className={clsx(isActiveUser ? "ml-7 justify-self-start" : "justify-self-end mr-7")}>
                 {isLast && <MessageLastDate date={date} />}
             </div>
-            
         </div>
     );
 };

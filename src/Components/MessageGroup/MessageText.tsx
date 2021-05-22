@@ -44,7 +44,6 @@ const MessageText: FC<Props> = ({ text, date, isLast, isActiveUser }) => {
             <div className={clsx(isActiveUser ? "ml-7 justify-self-start" : "justify-self-end mr-7")}>
                 {isLast && <MessageLastDate date={date}> </MessageLastDate>}
             </div>
-        
         </div>
     );
 };
