@@ -17,6 +17,7 @@ import useUser from "../../Context/userContext";
 // Hooks
 // Pages
 import userAvatar from "../../resources/media/icons/userAvatar.svg";
+import { UserContext } from "../../Context/userContext"
 // Resources
 
 export interface Props {
@@ -27,9 +28,15 @@ export interface Props {
 
 export interface ScrollProps {}
 
+
+
 const AlwaysScrollToBottom: FC<ScrollProps> = () => {
-    const scrollRef = useRef<any>();
-    useEffect(() => scrollRef.current.scrollIntoView());
+    const scrollRef = useRef<HTMLDivElement>(null)
+    useEffect(() => {
+        if (null !== scrollRef.current){
+            scrollRef.current.scrollIntoView()
+        }
+    })
     return <div ref={scrollRef} />;
 };
 
@@ -59,7 +66,7 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages }) => {
         return moment(date1).diff(moment(date2), "days");
     };
 
-    const loggedUserId = useUser((state: any) => state.userId);
+    const loggedUserId = useUser((state:UserContext) => state.userId);
 
     const sendMessage = (text: string) => {
         if (currentMessages[currentMessages.length - 1][0].userId === loggedUserId) {
