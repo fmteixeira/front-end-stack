@@ -23,7 +23,7 @@ const Template: Story<Props> = (args) => <MessageFile {...args} />;
 
 // Component Props
 const props: Props = {
-    date: new Date(2012, 12, 18),
+    date: "2018-06-03",
     isLast: true,
     fileName: "nameExample.png",
     fileSize: "125Kb",

@@ -28,7 +28,7 @@ const ChatHeader: FC<Props> = ({ avatarIcon, name, date }: Props) => {
     onlineTime();
 
     return (
-        <div className="bg-white-100 rounded-t-md w-full h-24 grid grid-cols-[auto,1fr,auto,auto] gap-x-4 pl-4 pr-4 sm:pl-12 sm:pr-8 items-center">
+        <div className="bg-white-200 rounded-t-md w-full h-24 grid grid-cols-[auto,1fr,auto,auto] gap-x-4 pl-4 pr-4 sm:pl-12 sm:pr-8 items-center">
             <div className="ml-auto w-10 h-10 relative">
                 <img className="rounded-full absolute" alt="" src={avatarIcon} />
                 <div

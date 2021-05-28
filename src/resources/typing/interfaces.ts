@@ -5,14 +5,16 @@ export interface Example {
     readonly age?: number;
 }
 export interface Message {
-    readonly id: number;
+    readonly id: string;
+    readonly date: string;
+    readonly userId: number;
     readonly text: string;
-    readonly date: Date;
 }
 
 export interface MessageFile {
-    readonly id: number;
-    readonly date: Date;
+    readonly id: string;
+    readonly date: string;
+    readonly userId: number;
     readonly text?: string;
     readonly file: SentFile;
 }
@@ -28,6 +30,7 @@ export interface Messages {
     readonly date: string | undefined;
     readonly message: string | undefined;
 }
+
 export interface Chat {
     readonly id: number;
     readonly name: string;
