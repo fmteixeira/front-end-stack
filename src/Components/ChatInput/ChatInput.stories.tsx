@@ -19,7 +19,7 @@ const Template: Story<Props> = (args) => (
 );
 
 // Component Props
-const props: Props = {};
+const props: Props = { handleSubmit: (text: string) => {} };
 
 // Component Story Node
 export const Default = Template.bind({});

@@ -58,7 +58,9 @@ module.exports = {
         
         createChatButton: "6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15)",
 
-        onlineCircle: " 0 0 0 2px #fff"
+        onlineCircle: " 0 0 0 2px #fff",
+
+        cirleIconShadow: "0px 0px 15px #2a8bf2"
 
 
       }
