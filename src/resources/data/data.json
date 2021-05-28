@@ -1,0 +1,260 @@
+[
+    { 
+        "id": 0,
+        "name": "Luy Robin",
+        "img": "https://picsum.photos/seed/picsum/300/300",
+        "online": true,
+        "unreadMessageCounter": 1,
+        "messages": [{   
+            "username":"Luy Robin",
+            "date": "2021-05-09T22:30:00",
+            "message": "Good Afternoon"
+        },
+        {    
+            "username":"Luy Robin",
+            "date": "2021-05-09T22:33:00",
+            "message": "Wanna go swimming"
+        },
+        {   
+            "username":"John Doe",
+            "date": "2021-05-09T22:36:00",
+            "message":"Hell yeah!"
+        },
+        {      
+            "username":"Luy Robin",
+            "date": "2021-05-09T22:38:00",
+            "message": "Great. See you at the beach."
+        },
+        {    
+            "username":"John Doe",
+            "date": "2021-05-09T22:39:00",
+            "message":"Dont forget your sunscreen! xD"
+        },
+        {  
+            "username":"Luy Robin",
+            "date": "2021-05-09T22:45:00",
+            "message":"Yeah fine... xD"
+        }
+        ]
+    },
+    { 
+        "id": 1,
+        "name": "Jared Sunn",
+        "img": "https://picsum.photos/id/935/300/300",
+        "online": true,
+        "unreadMessageCounter": 0,
+        "messages": [{  
+            "username":"Jared Sunn",
+            "date": "2021-05-08T22:30:00",
+            "message": "Hello"
+        },
+        {  
+            "username":"Jared Sunn",
+            "date": "2021-05-08T22:31:00",
+            "message": "Planning to go to a movie. Wanna come?"  
+        },
+        {   
+            "username":"John Doe",
+            "date": "2021-05-09T01:30:00",
+            "message":"Sure why not."
+        },
+        {   
+            "username":"Jared Sunn",
+            "date": "2021-05-09T01:35:00",
+            "message": "Great. See you then."
+        },
+        {   
+            "username":"John Doe",
+            "date": "2021-05-09T01:37:00",
+            "message":"ya bye."
+        }
+        ]
+      },
+    {
+        "id": 2,
+        "name": "Nika Jerrardo",
+        "img": "https://picsum.photos/id/995/300/300",
+        "online": false,
+        "unreadMessageCounter": 2, 
+        "messages": [{  
+            "username":"Nika Jerrardo",
+            "date": "2021-05-08T12:30:00",
+            "message": "When is the test???"
+        },
+        {  
+            "username":"Nika Jerrardo",
+            "date": "2021-05-08T13:30:00",
+            "message": "Cuz I didn't start studying yet"
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-08T14:30:00",
+            "message":"It's actually tomorrow..."
+        },
+        {  
+            "username":"Nika Jerrardo",
+            "date": "2021-05-08T14:35:00",
+            "message": "Ohhhh"
+        },
+        {  
+            "username":"Nika Jerrardo",
+            "date": "2021-05-08T14:36:00",
+            "message": "Well, at least we have exams xD"
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-08T14:38:00",
+            "message":"AHAHAHA!"
+
+        },
+        {
+            "username":"Nika Jerrardo",
+            "date": "2021-05-08T14:39:00",
+            "message": "If I fail the test, can you help me? :')"
+        },
+        {  
+            "username":"Nika Jerrardo",
+            "date": "2021-05-08T14:40:00",
+            "message": "I realy don't like this subject..."
+        }
+        ]
+    },
+    { 
+        "id": 3,
+        "name": "David Amrosa",
+        "img": "https://picsum.photos/id/535/300/300",
+        "online": false,
+        "unreadMessageCounter": 0, 
+        "messages": [{  
+            "username":"David Amrosa",
+            "date": "2021-05-06T08:30:00",
+            "message": "Hello!"  
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-06T08:31:00",
+            "message":"Hi!!!"
+        },
+        {  
+            "username":"David Amrosa",
+            "date": "2021-05-06T08:35:00",
+            "message": "Have you been hanging out lately?"    
+        },
+        {   
+            "username":"John Doe",
+            "date": "2021-05-07T09:30:00",
+            "message":"What do you mean?"
+        },
+        {      
+            "username":"David Amrosa",
+            "date": "2021-05-007T09:35:00",
+            "message": "Like, have you been hanging out?"  
+        },
+        {   
+            "username":"John Doe",
+            "date": "2021-05-08T09:37:00",
+            "message":"Of course not!!" 
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-08T09:40:00",
+            "message":"We are in lockdown!"
+        }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Jeff Dunham",
+        "img": "https://picsum.photos/id/435/300/300",
+        "online": true,
+        "unreadMessageCounter": 3, 
+        "messages": [{
+            "username":"Jeff Dunham",
+            "date": "2021-05-06T12:30:00",
+            "message": "Hey! I'm trying calling you!!"
+        },
+        {  
+            "username":"Jeff Dunham",
+            "date": "2021-05-06T13:30:00",
+            "message": "Pick up your phone!!"
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-06T15:30:00",
+            "message":"Sorry, I was ocupied... :3"
+        },
+        {  
+            "username":"Jeff Dunham",
+            "date": "2021-05-06T15:35:00",
+            "message": "Doing what?!."  
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-07T15:36:00",
+            "message":"Personal business :)"
+        },
+        {  
+            "username":"Jeff Dunham",
+            "date": "2021-05-07T15:37:00",
+            "message": "Alright fine."   
+        },
+        {    
+            "username":"Jeff Dunham",
+            "date": "2021-05-07T15:37:30",
+            "message": "No harm done."  
+        },
+        {  
+            "username":"Jeff Dunham",
+            "date": "2021-05-07T15:37:30",
+            "message": "Just to remind you that now classes are online." 
+        }
+      ]
+    },
+    { 
+        "id": 5,
+        "name": "Laura Moreau",
+        "img": "https://picsum.photos/id/500/300/300",
+        "online": false,
+        "unreadMessageCounter": 1,
+        "messages": [{  
+            "username":"Laura Moreau",
+            "date": "2021-05-05T22:30:00",
+            "message": "Good Afternoon"
+              
+        },
+        {  
+            "username":"Laura Moreau",
+            "date": "2021-05-05T22:33:00",
+            "message": "Wanna go swimming"
+        },
+        {   
+            "username":"John Doe",
+            "date": "2021-05-05T22:36:00",
+            "message":"Hell yeah!"
+        },
+        {  
+            "username":"Laura Moreau",
+            "date": "2021-05-05T22:38:00",
+            "message": "Great. See you at the beach."
+        },
+        {  
+            "username":"John Doe",
+            "date": "2021-05-05T22:39:00",
+            "message":"Dont forget your sunscreen! xD"
+        },
+        {  
+            "username":"Laura Moreau",
+            "date": "2021-05-05T22:45:00",
+            "message":"Yeah fine... xD"
+        }
+      ]
+    },
+    { 
+        "id": 6,
+        "name": "Michael Scoofield",
+        "img": "https://picsum.photos/id/500/300/300",
+        "online": true,
+        "unreadMessageCounter": 0,
+        "messages": []
+    }
+]

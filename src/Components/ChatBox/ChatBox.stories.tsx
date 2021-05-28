@@ -22,14 +22,52 @@ export default {
 // Component Story
 const Template: Story<Props> = (args) => <ChatBox {...args} />;
 
+function setChat(): () => void {
+    return Function;
+}
+
 // Component Props
 const propsDefault: Props = {
-    userAvatar: userAvatar,
-    userName: "Luy Robin",
-    lastMsgTime: 2,
-    msgText:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas velit doloribus porro quae dolores consequatur in modi quidem. Natus vel ad dolores laborum fugiat asperiores modi, neque pariatur aperiam possimus. Delectus, excepturi? Natus, odio quidem, nam, dolore numquam laboriosam at voluptatibus eos earum blanditiis aliquam consequatur facere ut! Esse!",
-    msgsNum: 3,
+    setChat: setChat(),
+    chat: {
+        id: 5,
+        name: "Laura Moreau",
+        img: "https://picsum.photos/id/500/300/300",
+        online: false,
+        unreadMessageCounter: 1,
+        messages: [
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:30:00",
+                message: "Good Afternoon",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:33:00",
+                message: "Wanna go swimming",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:36:00",
+                message: "Hell yeah!",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:38:00",
+                message: "Great. See you at the beach.",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:39:00",
+                message: "Dont forget your sunscreen! xD",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:45:00",
+                message: "Yeah fine... xD",
+            },
+        ],
+    },
     active: false,
 };
 
@@ -38,13 +76,48 @@ export const Default = Template.bind({});
 Default.args = propsDefault;
 
 //Component Props
+
 const propsActive: Props = {
-    userAvatar: userAvatar,
-    userName: "Luy Robin",
-    lastMsgTime: 2,
-    msgText:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas velit doloribus porro quae dolores consequatur in modi quidem. Natus vel ad dolores laborum fugiat asperiores modi, neque pariatur aperiam possimus. Delectus, excepturi? Natus, odio quidem, nam, dolore numquam laboriosam at voluptatibus eos earum blanditiis aliquam consequatur facere ut! Esse!",
-    msgsNum: 3,
+    setChat: setChat(),
+    chat: {
+        id: 5,
+        name: "Laura Moreau",
+        img: "https://picsum.photos/id/500/300/300",
+        online: true,
+        unreadMessageCounter: 1,
+        messages: [
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:30:00",
+                message: "Good Afternoon",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:33:00",
+                message: "Wanna go swimming",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:36:00",
+                message: "Hell yeah!",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:38:00",
+                message: "Great. See you at the beach.",
+            },
+            {
+                username: "John Doe",
+                date: "2021-05-05T22:39:00",
+                message: "Dont forget your sunscreen! xD",
+            },
+            {
+                username: "Laura Moreau",
+                date: "2021-05-05T22:45:00",
+                message: "Yeah fine... xD",
+            },
+        ],
+    },
     active: true,
 };
 
@@ -52,6 +125,29 @@ const propsActive: Props = {
 export const Active = Template.bind({});
 Active.args = propsActive;
 Active.parameters = {
+    design: {
+        type: "figma",
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-1?node-id=1%3A210",
+    },
+};
+
+const propsNoMessage: Props = {
+    setChat: setChat(),
+    chat: {
+        id: 5,
+        name: "Laura Moreau",
+        img: "https://picsum.photos/id/500/300/300",
+        online: true,
+        unreadMessageCounter: 1,
+        messages: [],
+    },
+    active: true,
+};
+
+// Component Story Node
+export const NoMessage = Template.bind({});
+NoMessage.args = propsNoMessage;
+NoMessage.parameters = {
     design: {
         type: "figma",
         url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-1?node-id=1%3A210",

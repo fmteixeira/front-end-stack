@@ -2,21 +2,27 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
-import DayLine, { Props } from "./DayLine";
+import ChatColumn, { Props } from "./ChatColumn";
+// Data
+import data from "../../resources/data/data.json";
 
 export default {
-    title: "DayLine",
-    component: DayLine,
+    title: "ChatColumn",
+    component: ChatColumn,
     decorators: [withDesign],
     argTypes: {},
 } as Meta;
 
 // Component Story
-const Template: Story<Props> = (args) => <DayLine {...args} />;
+const Template: Story<Props> = (args) => (
+    <div className="h-screen w-160">
+        <ChatColumn {...args} />
+    </div>
+);
 
 // Component Props
 const props: Props = {
-    date: "2018-06-03",
+    chats: data,
 };
 
 // Component Story Node
@@ -25,6 +31,6 @@ Default.args = props;
 Default.parameters = {
     design: {
         type: "figma",
-        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-(1)?node-id=616%3A657", // Figma Url
+        url: "https://www.figma.com/file/M0H6CQoJPQ6yNYy5q5jauC/Chat-Dashboard-1?node-id=786%3A192", // Figma Url
     },
 };
