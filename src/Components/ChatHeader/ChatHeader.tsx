@@ -13,7 +13,7 @@ import { ReactComponent as VerticalDots } from "../../resources/media/icons/vert
 export interface Props {
     avatarIcon: string;
     name: string;
-    date?: Date | undefined;
+    date?: string;
 }
 
 const ChatHeader: FC<Props> = ({ avatarIcon, name, date }: Props) => {

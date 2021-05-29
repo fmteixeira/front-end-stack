@@ -4,8 +4,6 @@ import { withDesign } from "storybook-addon-designs";
 // Component
 import ChatBox, { Props } from "./ChatBox";
 
-import userAvatar from "../../resources/media/icons/userAvatar.svg";
-
 export default {
     title: "ChatBox",
     component: ChatBox,
@@ -33,38 +31,21 @@ const propsDefault: Props = {
         id: 5,
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
-        online: false,
+        online: "2021-05-08T14:40:00",
         unreadMessageCounter: 1,
         messages: [
             {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:30:00",
-                message: "Good Afternoon",
+                id: "0",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, fuga?",
+                date: "2021-04-18",
+                userId: 0,
             },
             {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:33:00",
-                message: "Wanna go swimming",
-            },
-            {
-                username: "John Doe",
-                date: "2021-05-05T22:36:00",
-                message: "Hell yeah!",
-            },
-            {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:38:00",
-                message: "Great. See you at the beach.",
-            },
-            {
-                username: "John Doe",
-                date: "2021-05-05T22:39:00",
-                message: "Dont forget your sunscreen! xD",
-            },
-            {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:45:00",
-                message: "Yeah fine... xD",
+                id: "1",
+                text:
+                    "Lorem ipsum dolor sit amet consectetur adip elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
+                date: "2021-05-18",
+                userId: 1,
             },
         ],
     },
@@ -83,38 +64,21 @@ const propsActive: Props = {
         id: 5,
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
-        online: true,
+        online: "2021-05-08T14:40:00",
         unreadMessageCounter: 1,
         messages: [
             {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:30:00",
-                message: "Good Afternoon",
+                id: "0",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, fuga?",
+                date: "2021-04-18",
+                userId: 0,
             },
             {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:33:00",
-                message: "Wanna go swimming",
-            },
-            {
-                username: "John Doe",
-                date: "2021-05-05T22:36:00",
-                message: "Hell yeah!",
-            },
-            {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:38:00",
-                message: "Great. See you at the beach.",
-            },
-            {
-                username: "John Doe",
-                date: "2021-05-05T22:39:00",
-                message: "Dont forget your sunscreen! xD",
-            },
-            {
-                username: "Laura Moreau",
-                date: "2021-05-05T22:45:00",
-                message: "Yeah fine... xD",
+                id: "1",
+                text:
+                    "Lorem ipsum dolor sit amet consectetur adip elit. Quas, velit. Hic veniam tempore ullam debitis repellendus! Tempore veniam eius, recusandae doloremque at ex ullam rem, consequatur quidem cum perferendis eos.",
+                date: "2021-05-18",
+                userId: 1,
             },
         ],
     },
@@ -137,7 +101,6 @@ const propsNoMessage: Props = {
         id: 5,
         name: "Laura Moreau",
         img: "https://picsum.photos/id/500/300/300",
-        online: true,
         unreadMessageCounter: 1,
         messages: [],
     },

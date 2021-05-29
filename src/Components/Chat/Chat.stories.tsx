@@ -6,7 +6,7 @@ import sideBarAvatar from "../../resources/media/icons/sideBarHeaderAvatar.svg";
 // Component
 import Chat, { Props } from "./Chat";
 // Data
-import data from "../../resources/data/data.json";
+import newdata from "../../resources/data/newdata.json";
 
 export default {
     title: "Componente/Chat",
@@ -22,7 +22,7 @@ const Template: Story<Props> = (args) => <Chat {...args} />;
 const props: Props = {
     username: "John Doe",
     avatarUrl: sideBarAvatar,
-    chats: data,
+    chats: newdata,
 };
 
 // Component Story Node

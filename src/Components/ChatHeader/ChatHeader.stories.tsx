@@ -22,7 +22,7 @@ const NoDateTemplate: Story<Props> = (args) => <ChatHeader {...args} />;
 const props: Props = {
     avatarIcon: chatHeaderAvatar,
     name: "Nika Jerrardo",
-    date: new Date(2021, 4, 4, 14, 30),
+    date: "2021-05-08T14:40:00",
 };
 
 const NoDateProps: Props = {

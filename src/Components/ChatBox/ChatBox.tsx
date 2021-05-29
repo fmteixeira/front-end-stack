@@ -30,7 +30,7 @@ const ChatBox: FC<Props> = ({ setChat, chat, active }) => {
         >
             <div className="h-[54px] w-[54px] relative">
                 <img src={chat.img} alt="" className="rounded-full absolute h-[54px] w-[54px]" />
-                {chat.online && (
+                {!chat.online && (
                     <span className="right-9 h-[10px] w-[10px] bg-green-500 absolute rounded-full shadow-onlineCircle"></span>
                 )}
             </div>
@@ -57,7 +57,7 @@ const ChatBox: FC<Props> = ({ setChat, chat, active }) => {
                             "text-justify text-sm sm:text-base line-clamp-3",
                         )}
                     >
-                        {chat.messages[chat.messages.length - 1].message}
+                        {chat.messages[chat.messages.length - 1].text}
                     </p>
                 )}
 

@@ -4,7 +4,7 @@ import { withDesign } from "storybook-addon-designs";
 // Component
 import ChatColumn, { Props } from "./ChatColumn";
 // Data
-import data from "../../resources/data/data.json";
+import newdata from "../../resources/data/newdata.json";
 
 export default {
     title: "ChatColumn",
@@ -26,7 +26,7 @@ function setChat(): () => void {
 
 // Component Props
 const props: Props = {
-    chats: data,
+    chats: newdata,
     setChat: setChat,
 };
 

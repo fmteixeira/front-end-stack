@@ -59,7 +59,6 @@ const ChatInput: FC<Props> = ({ handleSubmit }) => {
             >
                 <OutsideClickHandler
                     onOutsideClick={() => {
-                        console.log("FODASE" + showAttachments);
                         setShowAttachments(false);
                     }}
                 >
