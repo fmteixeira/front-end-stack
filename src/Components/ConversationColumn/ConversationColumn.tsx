@@ -24,9 +24,10 @@ export interface Props {
     name: string;
     online?: string;
     messages: Array<MessageTextInterface | MessageFileInterface>;
+    setChatNull: Function;
 }
 
-const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages, online }) => {
+const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages, online, setChatNull }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -68,7 +69,7 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages, online }) =
     const loggedUserId = useUser((state: UserContext) => state.userId);
 
     const sendMessage = (text: string) => {
-        if (currentMessages[currentMessages.length - 1][0].userId === loggedUserId) {
+        if (currentMessages.length > 0 && currentMessages[currentMessages.length - 1][0].userId === loggedUserId) {
             setCurrentMessages([
                 ...currentMessages.slice(0, -1),
                 [
@@ -92,7 +93,7 @@ const ConversationColumn: FC<Props> = ({ avatarIcon, name, messages, online }) =
     return (
         <div className="bg-white-100 h-screen w-full text-sm md:text-base">
             <div className="grid grid-rows-[auto,1fr,auto] h-full relative">
-                <ChatHeader avatarIcon={avatarIcon} name={name} date={online} />
+                <ChatHeader avatarIcon={avatarIcon} name={name} date={online} setChatNull={setChatNull} />
 
                 <div ref={scrollRef} className="w-full overflow-y-auto bg-white-100 grid gap-y-2 pt-2 pl-2 pr-2 ">
                     {currentName !== name && updateConversationColumn()}

@@ -1,5 +1,4 @@
 import React from "react";
-import moment from "moment";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { withDesign } from "storybook-addon-designs";
 // Component
@@ -19,6 +18,10 @@ export default {
         },
     },
 } as Meta;
+
+function setChatNull(): Function {
+    return Function;
+}
 
 // Component Story
 const Template: Story<Props> = (args) => (
@@ -80,6 +83,7 @@ const props: Props = {
             userId: 2,
         },
     ],
+    setChatNull: setChatNull,
 };
 
 // Component Story Node

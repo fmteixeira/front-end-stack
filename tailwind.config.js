@@ -35,6 +35,11 @@ module.exports = {
       serif: ["Merriweather", "serif"],
     },
     extend: {
+      scale: {
+        '25': '.25',
+        '32': '.32',
+        '200': '2'
+      },
       spacing: {
         "0.5": "0.12rem",
         "128": "32rem",

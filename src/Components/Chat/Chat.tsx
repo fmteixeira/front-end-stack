@@ -19,6 +19,10 @@ export interface Props {
 const Chat: FC<Props> = ({ username, avatarUrl, chats }: Props) => {
     const [currentChat, setCurrentChat] = useState<number | null>(null);
 
+    const setChatNull = (): void => {
+        setCurrentChat(null);
+    };
+
     const setChatEvent = (index: number): void => {
         setCurrentChat(index);
     };
@@ -43,6 +47,7 @@ const Chat: FC<Props> = ({ username, avatarUrl, chats }: Props) => {
                                 name={chats[currentChat].name}
                                 messages={chats[currentChat].messages}
                                 online={chats[currentChat].online}
+                                setChatNull={setChatNull}
                             />
                         )}
                     </div>

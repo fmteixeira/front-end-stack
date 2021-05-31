@@ -35,6 +35,7 @@ const ChatColumnMessages: FC<Props> = ({ chats, inputValue, setChat }: Props) =>
                                     key={chat.id}
                                     setChat={() => setChatEvent(index)}
                                     chat={chat}
+                                    lastMessage={chat.messages[chat.messages.length - 1]}
                                     active={currentChat === chat.id}
                                 />
                             )
