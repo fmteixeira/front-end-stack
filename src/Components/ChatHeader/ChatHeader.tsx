@@ -30,7 +30,7 @@ const ChatHeader: FC<Props> = ({ avatarIcon, name, date, setChatNull }: Props) =
     onlineTime();
 
     return (
-        <div className="bg-white-200 rounded-t-md w-full h-24 grid grid-cols-[auto,auto,1fr,auto,auto] md:grid-cols-[auto,1fr,auto,auto] gap-x-2 sm:gap-x-4 pl-1 pr-2 sm:pl-12 sm:pr-8 items-center">
+        <div className="bg-white-200 rounded-t-md w-full h-24 grid grid-cols-[auto,auto,1fr,auto,auto] md:grid-cols-[auto,1fr,auto,auto] gap-x-2 sm:gap-x-4 pl-1 pr-2 sm:pl-6 sm:pr-4 items-center">
             <button
                 onClick={() => setChatNull()}
                 className="block md:hidden transform scale-125 sm:scale-150 -rotate-90 outline-none focus:outline-none group"
