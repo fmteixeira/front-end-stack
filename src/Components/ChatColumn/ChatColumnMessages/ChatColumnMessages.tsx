@@ -5,14 +5,20 @@ import ChatBox from "../../ChatBox/ChatBox";
 // Hooks
 // Pages
 // Resources
-import { Chat } from "../../../resources/typing/interfaces";
+import { ChatMessages } from "../../../resources/typing/interfaces";
 interface Props {
-    chats: Chat[];
+    chats?: ChatMessages[];
     inputValue: string;
+    setChat: (index: number) => void;
 }
 
-const ChatColumnMessages: FC<Props> = ({ chats, inputValue }: Props) => {
-    const [currentChat, setCurrentChat] = useState<number>(1);
+const ChatColumnMessages: FC<Props> = ({ chats, inputValue, setChat }: Props) => {
+    const [currentChat, setCurrentChat] = useState<number | null>(null);
+
+    const setChatEvent = (index: number): void => {
+        setCurrentChat(index);
+        setChat(index);
+    };
 
     const nameSearch = (value: string): string => {
         return value.toLowerCase().replace(/\s/g, "");
@@ -21,18 +27,20 @@ const ChatColumnMessages: FC<Props> = ({ chats, inputValue }: Props) => {
     return (
         <div className="h-full overflow-y-auto p-2">
             <div className="grid gap-y-3">
-                {chats.map((chat, index) => {
-                    return (
-                        nameSearch(chat.name).includes(nameSearch(inputValue)) && (
-                            <ChatBox
-                                key={chat.id}
-                                setChat={() => setCurrentChat(index)}
-                                chat={chat}
-                                active={currentChat === chat.id}
-                            />
-                        )
-                    );
-                })}
+                {chats &&
+                    chats.map((chat, index) => {
+                        return (
+                            nameSearch(chat.name).includes(nameSearch(inputValue)) && (
+                                <ChatBox
+                                    key={chat.id}
+                                    setChat={() => setChatEvent(index)}
+                                    chat={chat}
+                                    lastMessage={chat.messages[chat.messages.length - 1]}
+                                    active={currentChat === chat.id}
+                                />
+                            )
+                        );
+                    })}
             </div>
         </div>
     );

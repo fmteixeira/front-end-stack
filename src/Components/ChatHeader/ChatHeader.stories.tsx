@@ -13,6 +13,10 @@ export default {
     argTypes: {},
 } as Meta;
 
+function setChatNull(): Function {
+    return Function;
+}
+
 // Component Story
 const Template: Story<Props> = (args) => <ChatHeader {...args} />;
 
@@ -22,12 +26,14 @@ const NoDateTemplate: Story<Props> = (args) => <ChatHeader {...args} />;
 const props: Props = {
     avatarIcon: chatHeaderAvatar,
     name: "Nika Jerrardo",
-    date: new Date(2021, 4, 4, 14, 30),
+    date: "2021-05-08T14:40:00",
+    setChatNull: setChatNull,
 };
 
 const NoDateProps: Props = {
     avatarIcon: chatHeaderAvatar,
     name: "Nika Jerrardo",
+    setChatNull: setChatNull,
 };
 
 // Component Story Node

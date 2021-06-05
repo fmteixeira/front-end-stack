@@ -9,7 +9,6 @@ import MessageLastDate from "../MessageLastDate";
 // Context
 // Hooks
 // Pages
-import { DownloadableFileFormats } from "../../../resources/typing/types";
 // Resources
 
 export interface Props {
@@ -18,7 +17,7 @@ export interface Props {
     text?: string;
     fileName: string;
     fileSize: string;
-    fileType: DownloadableFileFormats;
+    fileType: string;
     fileEncoded: string;
     isActiveUser: boolean;
 }
@@ -28,7 +27,7 @@ const MessageFile: FC<Props> = ({ text, date, isLast, fileName, fileSize, fileTy
     const pdfPre = "data:application/pdf;base64,";
     const imgPre = "data:image/png;base64,";
 
-    const download = (base64: string, type: DownloadableFileFormats, fileName: string): void => {
+    const download = (base64: string, type: string, fileName: string): void => {
         var a = document.createElement("a"); //Create <a>
         if (type === "Excel") a.href = `${excelPre}${base64}`;
         else if (type === "Pdf") a.href = `${pdfPre}${base64}`;

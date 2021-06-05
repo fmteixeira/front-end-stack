@@ -3,19 +3,29 @@ import clsx from "clsx";
 import moment from "moment";
 // Components
 // Media
+import { ReactComponent as PhotoFile } from "../../resources/media/icons/photoFile.svg";
 // Context
 // Hooks
 // Pages
 // Resources
-import { Chat } from "../../resources/typing/interfaces";
+import {
+    ChatMessages,
+    Message as MessageInterface,
+    MessageFile as MessageFileInterface,
+} from "../../resources/typing/interfaces";
 
 export interface Props {
     setChat: () => void;
-    chat: Chat;
+    chat: ChatMessages;
     active: boolean;
+    lastMessage?: MessageInterface | MessageFileInterface;
 }
 
-const ChatBox: FC<Props> = ({ setChat, chat, active }) => {
+const ChatBox: FC<Props> = ({ setChat, chat, active, lastMessage }) => {
+    function isMessageFile(msg: MessageInterface | MessageFileInterface): msg is MessageFileInterface {
+        return (msg as MessageFileInterface).file !== undefined;
+    }
+
     return (
         <button
             onClick={() => setChat()}
@@ -30,14 +40,14 @@ const ChatBox: FC<Props> = ({ setChat, chat, active }) => {
         >
             <div className="h-[54px] w-[54px] relative">
                 <img src={chat.img} alt="" className="rounded-full absolute h-[54px] w-[54px]" />
-                {chat.online && (
+                {!chat.online && (
                     <span className="right-9 h-[10px] w-[10px] bg-green-500 absolute rounded-full shadow-onlineCircle"></span>
                 )}
             </div>
 
             <span className="font-bold text-xs sm:text-sm md:text-base text-black mr-auto">{chat.name}</span>
 
-            {chat.messages[chat.messages.length - 1] && (
+            {lastMessage && (
                 <span
                     className={clsx(
                         active ? "text-white-100 opacity-75" : "text-gray",
@@ -45,19 +55,19 @@ const ChatBox: FC<Props> = ({ setChat, chat, active }) => {
                         "text-xs sm:text-sm md:text-base",
                     )}
                 >
-                    {moment(chat.messages[chat.messages.length - 1].date).fromNow()}
+                    {moment(lastMessage.date).fromNow()}
                 </span>
             )}
 
             <div className="col-span-full grid grid-cols-[1fr,auto] gap-x-5">
-                {chat.messages[chat.messages.length - 1] && (
+                {lastMessage && (
                     <p
                         className={clsx(
                             active ? "text-white-100" : "text-gray",
                             "text-justify text-sm sm:text-base line-clamp-3",
                         )}
                     >
-                        {chat.messages[chat.messages.length - 1].message}
+                        {isMessageFile(lastMessage) ? <PhotoFile /> : lastMessage.text}
                     </p>
                 )}
 

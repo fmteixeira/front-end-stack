@@ -1,5 +1,3 @@
-import { DownloadableFileFormats } from "./types";
-
 export interface Example {
     readonly name: string;
     readonly age?: number;
@@ -21,7 +19,7 @@ export interface MessageFile {
 export interface SentFile {
     readonly fileEncoded: string;
     readonly fileName: string;
-    readonly fileType: DownloadableFileFormats;
+    readonly fileType: string;
     readonly fileSize: string;
 }
 
@@ -31,11 +29,11 @@ export interface Messages {
     readonly message: string | undefined;
 }
 
-export interface Chat {
+export interface ChatMessages {
     readonly id: number;
     readonly name: string;
     readonly img: string;
-    readonly online: boolean;
+    readonly online?: string;
     readonly unreadMessageCounter: number;
-    readonly messages: Messages[];
+    readonly messages: Array<Message | MessageFile>;
 }

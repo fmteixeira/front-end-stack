@@ -19,7 +19,7 @@ const ChatColumnHeader: FC<Props> = ({ setSearch }: Props) => {
     return (
         <div className="p-3">
             <div className="grid grid-cols-2 py-5">
-                <div className="font-semibold text-gray mt-auto">
+                <div className="font-semibold text-sm md:text-base text-gray mt-auto">
                     <p>Recent Chats</p>
                 </div>
                 <div className="ml-auto">

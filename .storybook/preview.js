@@ -3,4 +3,5 @@ export const parameters = {
   darkMode: {
     current: "dark",
   },
+  layout: 'fullscreen',
 };

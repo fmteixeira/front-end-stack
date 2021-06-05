@@ -20,7 +20,7 @@ const HeaderButton: FC<Props> = ({ titulo, active, setNav, icon }: Props) => {
     };
 
     return (
-        <div className="last:pt-72 m-auto md:m-0">
+        <div className="last:mt-auto">
             <button
                 onClick={() => clickEvent()}
                 className="h-12 w-full grid grid-cols-3 md:grid-cols-[1fr,auto,0.5fr,5fr] items-center focus:outline-none  "
